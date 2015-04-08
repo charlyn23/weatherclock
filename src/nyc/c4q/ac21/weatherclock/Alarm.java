@@ -27,9 +27,9 @@ public class Alarm {
         int x = random.nextInt(5);
 
         if (x == 0)
-            return AnsiTerminal.Color.RED;
-        else if (x == 1)
             return AnsiTerminal.Color.GREEN;
+        else if (x == 1)
+            return AnsiTerminal.Color.RED;
         else if (x == 2)
             return AnsiTerminal.Color.YELLOW;
         else if (x == 3)
