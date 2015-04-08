@@ -8,39 +8,10 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 /**
- * Created by sufeizhao on 4/7/15.
+ * Created by team3 on 4/7/15.
  */
 public class Main {
 
-    public static Calendar getSunrise()
-    {
-        URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
-        String doc = HTTP.get(url);
-        JSONObject obj = (JSONObject) JSONValue.parse(doc);
-
-        JSONObject sys = (JSONObject) obj.get("sys");
-        if(sys == null) return null;
-        Long sunriseTimestamp = (Long) sys.get("sunrise");
-        if(sunriseTimestamp == null) return null;
-        else
-
-            return DateTime.fromTimestamp(sunriseTimestamp);
-
-    }
-    public static Calendar getSunset() {
-        URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
-        String doc = HTTP.get(url);
-        JSONObject obj = (JSONObject) JSONValue.parse(doc);
-
-        JSONObject sys = (JSONObject) obj.get("sys");
-        if(sys == null) return null;
-        Long sunsetTimestamp = (Long) sys.get("sunset");
-        if(sunsetTimestamp == null) return null;
-        else
-
-            return DateTime.fromTimestamp(sunsetTimestamp);
-
-    }
     public static void main(String[] args) {
         final int numCols = TerminalSize.getNumColumns();
         final int numRows = TerminalSize.getNumLines();
@@ -73,8 +44,8 @@ public class Main {
         int yClock = numCols/2;
 
         // Get sunset time for the current day.
-        Calendar sunset = getSunset();
-        Calendar sunrise = getSunrise();
+        Calendar sunset = Sunset.getSunset();
+        Calendar sunrise = Sunrise.getSunrise();
         //Get wind speed and direction
         Double windSpeed = WindSpeed.getWindSpeed();
         String windDirection = WindDirection.getWindDirection();
@@ -146,37 +117,38 @@ public class Main {
                 terminal.moveTo(xCalendar + i, numCols-26);
                 terminal.write(CalendarPrinter.getCalendar(cal).get(i));
             }
-            DateTime.pause(1.0);
 
             //Write sunrise time
-            String sunriseEmoji = new String(new int[] { 0x1F303 }, 0, 1);
+            String sunriseEmoji = new String(new int[] { 0x1F305 }, 0, 1);
             String sunriseTime = DateTime.formatTime(sunrise, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(13, xPosition - 1);
+            terminal.moveTo(13, numCols + 50);
             terminal.write(sunriseEmoji + " sunrise at " + sunriseTime);
 
             // Write sunset time in dark yellow.
+            String sunsetEmoji = new String (new int[] {0x1F307}, 0, 1);
             String sunsetTime = DateTime.formatTime(sunset, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(15, xPosition - 1);
-            terminal.write("U+1F304" + "sunset at " + sunsetTime);
+            terminal.moveTo(15, xPosition + 1);
+            terminal.write(sunsetEmoji + "sunset at " + sunsetTime);
 
             //Write wind direction
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(17, xPosition - 1);
+            terminal.moveTo(17, xPosition + 1);
             terminal.write("Wind direction : " + windDirection);
 
             //Write wind speed
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(19, xPosition - 1);
+            terminal.moveTo(19, xPosition + 1);
             terminal.write("Wind speed: " + windSpeed);
 
             //Write DST
             String date = DateTime.formatDate(cal);
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
-            terminal.moveTo(21, xPosition - 1);
+            terminal.moveTo(21, xPosition + 1);
             terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
             // Pause for one second, and do it again.
+            DateTime.pause(1.0);
         }
     }
 }

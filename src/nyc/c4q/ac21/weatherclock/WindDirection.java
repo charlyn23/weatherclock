@@ -42,7 +42,7 @@ public class WindDirection
                 windDirection += "NE";
             }
             else if ((windDeg >= 56.25) && (windDeg < 78.75)) {
-                windDirection += "ENE";
+                windDirection += "↗ENE↗";
             }
             else if((windDeg >= 78.75) && (windDeg < 101.25)) {
                 windDirection += "E";

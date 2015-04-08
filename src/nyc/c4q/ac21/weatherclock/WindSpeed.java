@@ -17,11 +17,7 @@ public class WindSpeed {
         JSONObject obj = (JSONObject) JSONValue.parse(doc);
         JSONObject windStuff = (JSONObject) obj.get("wind");
         Double windSpeed = (Double) windStuff.get("speed");
-        //System.out.println("Wind direction: " + getWindDirection());
         return windSpeed;
     }
-//    public static void main(String [] args){
-//
-//        System.out.println(getWindSpeed());
-//    }
+
 }
