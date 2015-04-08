@@ -1,0 +1,27 @@
+package nyc.c4q.ac21.weatherclock;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+import java.net.URL;
+
+/**
+ * Created by charlynbuchanan on 4/7/15.
+ */
+public class WindSpeed {
+    public static Double getWindSpeed() {
+
+        JSONParser windParser = new JSONParser();
+        URL url = HTTP
+                .stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
+        String doc = HTTP.get(url);
+        JSONObject obj = (JSONObject) JSONValue.parse(doc);
+        JSONObject windStuff = (JSONObject) obj.get("wind");
+        Double windSpeed = (Double) windStuff.get("speed");
+        //System.out.println("Wind direction: " + getWindDirection());
+        return windSpeed;
+    }
+//    public static void main(String [] args){
+//
+//        System.out.println(getWindSpeed());
+//    }
+}
