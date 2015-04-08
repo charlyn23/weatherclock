@@ -44,9 +44,7 @@ public class Main {
 
     }
 
-    /**
-     * SAMPLE CODE: Displays a very primitive clock.
-     */
+
     public static void main(String[] args) {
         // Find out the size of the terminal currently.
         final int numCols = TerminalSize.getNumColumns();
