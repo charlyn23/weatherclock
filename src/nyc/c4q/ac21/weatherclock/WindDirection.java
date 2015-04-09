@@ -17,7 +17,11 @@ public class WindDirection
                 .stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
         String doc = HTTP.get(url);
         JSONObject obj = (JSONObject) JSONValue.parse(doc);
+        if (obj == null)
+            return null;
         JSONObject windStuff = (JSONObject) obj.get("wind");
+        if (windStuff == null)
+            return null;
         Double windDeg = (Double) windStuff.get("deg");
         //System.out.println("Wind direction: " + getWindDirection());
 

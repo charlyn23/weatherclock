@@ -15,7 +15,11 @@ public class WindSpeed {
                 .stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
         String doc = HTTP.get(url);
         JSONObject obj = (JSONObject) JSONValue.parse(doc);
+        if (obj == null)
+            return null;
         JSONObject windStuff = (JSONObject) obj.get("wind");
+        if (windStuff == null)
+            return null;
         Double windSpeed = (Double) windStuff.get("speed");
 
         return windSpeed;
