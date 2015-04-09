@@ -17,11 +17,11 @@ public class Ascii {
     
     public static ArrayList<String> sun(){
         ArrayList<String> sunshine = new ArrayList<String>();
-        sunshine.add("    \ | /   ");
+        sunshine.add("    \\ | /   ");
         sunshine.add("  '-.~~~.-' ");
         sunshine.add(" -==;   ;==-");
         sunshine.add("  .-'~~~'-. ");
-        sunshine.add("    / | \   ");
+        sunshine.add("    / | \\   ");
 
         return sunshine;
     }

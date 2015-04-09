@@ -31,7 +31,7 @@ public class Main {
         String[] time = new String[2];
         boolean am = true;
 
-        if (alarm.matches("[0-2?]\\d:[0-5]\\d[a|A|p|P][m|M]")) {
+        if (alarm.matches("[0-2]?\\d:[0-5]\\d[a|A|p|P][m|M]")) {
             time = alarm.split(":");
             ap = time[1].substring(2);
             time[1] = time[1].substring(0, 2);
@@ -79,6 +79,7 @@ public class Main {
         }
         //Get Current Weather ID
         long currentWeather = TPH.getID();
+        String weatherInfo = Weather.weatherInfo();
         //Get word of day
         Random random = new Random();
         String wordOfDay = "";
@@ -86,14 +87,13 @@ public class Main {
                 "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
         try {
             ArrayList<String> words = ZuluGrabber.getWordArray(zulu);
-            int wordIndex = random.nextInt();
+            int wordIndex = random.nextInt(words.size());
             wordOfDay = words.get(wordIndex);
         }
         catch (FileNotFoundException e) {
         }
 
         // Print digital clock
-        int yPosition = 1 + numCols / 2 - 5;
         int yClock = numCols/2;
         int newsOffset = 0;
         while (true) {
@@ -115,13 +115,13 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
-//            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
-//                Alarm.alarm();
-//                terminal.setTextColor(Alarm.colorChange());
-//            } else if (alarm != null) {
-//                terminal.moveTo(numRows, 0);
-//                terminal.write("\u23F0" + "  " + alarm);
-//            }
+            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
+                Alarm.alarm();
+                terminal.setTextColor(Alarm.colorChange());
+            } else if (alarm != null) {
+                terminal.moveTo(numRows, 0);
+                terminal.write("\u23F0" + "  " + alarm);
+            }
 
             // print Clock
             terminal.setTextColor(AnsiTerminal.Color.CYAN);
@@ -208,11 +208,11 @@ public class Main {
 
             //Print weather condition ASCII
             terminal.setTextColor(AnsiTerminal.Color.WHITE);
-            Weather.printWeather(currentWeather);
+            Weather.printWeather(currentWeather, weatherInfo);
             
             //Print word of day
             terminal.moveTo(numRows - 4, numCols - 25);
-            terminal.write("Zulu word of the day:");
+            terminal.write("Zulu word of the day: " + wordOfDay);
             terminal.moveTo(numRows - 3, numCols - 25);
             terminal.write(wordOfDay);
 
