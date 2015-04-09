@@ -14,7 +14,6 @@ import java.util.Random;
 
 public class Alarm {
     final static AnsiTerminal terminal = new AnsiTerminal();
-    final static int numRows = TerminalSize.getNumLines();
 
     public static void alarm() {
         URL url = Clock.class.getResource("/audio/clock-cuckoo2.wav");
@@ -38,7 +37,7 @@ public class Alarm {
             return AnsiTerminal.Color.MAGENTA;
     }
 
-    public static void setAlarm(Calendar cal, boolean am, String[] time, int hour, int min, int sec){
+    public static boolean isTime(Calendar cal, boolean am, String[] time, int hour, int min, int sec){
         boolean morning = am && (cal.get(Calendar.HOUR_OF_DAY) <= 12);
         boolean evening = !am && (cal.get(Calendar.HOUR_OF_DAY) >= 12);
 
@@ -46,9 +45,8 @@ public class Alarm {
                 hour == Integer.valueOf(time[0]) &&
                 min == Integer.valueOf(time[1]) &&
                 sec <= 5) {
-            Alarm.alarm();
-            terminal.setTextColor(Alarm.colorChange());
+            return true;
         } else
-            terminal.clear();
+            return false;
     }
 }

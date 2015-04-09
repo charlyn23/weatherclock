@@ -123,20 +123,20 @@ public class Clock {
     public static void printHour(int hour, int hour1, int hour2) {
         if (hour < 10) {
             for (int i = 0; i < Clock.getClock(hour).size(); i++) {
-                terminal.moveTo(i+2, yClock - 33);
+                terminal.moveTo(i+6, yClock - 33);
                 terminal.write("         ");
             }
             for (int i = 0; i < Clock.getClock(hour).size(); i++) {
-                terminal.moveTo(i+2, yClock - 24);
+                terminal.moveTo(i+6, yClock - 24);
                 terminal.write(Clock.getClock(hour).get(i));
             }
         } else {
             for (int i = 0; i < Clock.getClock(hour1).size(); i++) {
-                terminal.moveTo(i+2, yClock - 33);
+                terminal.moveTo(i+6, yClock - 33);
                 terminal.write(Clock.getClock(hour1).get(i));
             }
             for (int i = 0; i < Clock.getClock(hour2).size(); i++) {
-                terminal.moveTo(i+2, yClock - 24);
+                terminal.moveTo(i+6, yClock - 24);
                 terminal.write(Clock.getClock(hour2).get(i));
             }
         }
@@ -145,20 +145,20 @@ public class Clock {
     public static void printMin(int min, int min1, int min2) {
         if (min < 10) {
             for (int i = 0; i < Clock.getClock(0).size(); i++) {
-                terminal.moveTo(i+2, yClock - 9);
+                terminal.moveTo(i+6, yClock - 9);
                 terminal.write(Clock.getClock(0).get(i));
             }
             for (int i = 0; i < Clock.getClock(min).size(); i++) {
-                terminal.moveTo(i+2, yClock);
+                terminal.moveTo(i+6, yClock);
                 terminal.write(Clock.getClock(min).get(i));
             }
         } else {
             for (int i = 0; i < Clock.getClock(min1).size(); i++) {
-                terminal.moveTo(i+2, yClock - 9);
+                terminal.moveTo(i+6, yClock - 9);
                 terminal.write(Clock.getClock(min1).get(i));
             }
             for (int i = 0; i < Clock.getClock(min2).size(); i++) {
-                terminal.moveTo(i+2, yClock);
+                terminal.moveTo(i+6, yClock);
                 terminal.write(Clock.getClock(min2).get(i));
             }
         }
@@ -167,20 +167,20 @@ public class Clock {
     public static void printSec(int sec, int sec1, int sec2) {
         if (sec < 10) {
             for (int i = 0; i < Clock.getClock(0).size(); i++) {
-                terminal.moveTo(i+2, yClock + 15);
+                terminal.moveTo(i+6, yClock + 15);
                 terminal.write(Clock.getClock(0).get(i));
             }
             for (int i = 0; i < Clock.getClock(sec).size(); i++) {
-                terminal.moveTo(i+2, yClock + 24);
+                terminal.moveTo(i+6, yClock + 24);
                 terminal.write(Clock.getClock(sec).get(i));
             }
         } else {
             for (int i = 0; i < Clock.getClock(sec1).size(); i++) {
-                terminal.moveTo(i+2, yClock + 15);
+                terminal.moveTo(i+6, yClock + 15);
                 terminal.write(Clock.getClock(sec1).get(i));
             }
             for (int i = 0; i < Clock.getClock(sec2).size(); i++) {
-                terminal.moveTo(i+2, yClock + 24);
+                terminal.moveTo(i+6, yClock + 24);
                 terminal.write(Clock.getClock(sec2).get(i));
             }
         }
@@ -188,7 +188,7 @@ public class Clock {
 
     public static void printColon(int y) {
         for (int i = 0; i < Clock.colon().size(); i++) {
-            terminal.moveTo(i+3, yClock + y);
+            terminal.moveTo(i+6, yClock + y);
             terminal.write(Clock.colon().get(i));
         }
     }
@@ -200,7 +200,7 @@ public class Clock {
         int year = cal.get(Calendar.YEAR);
         terminal.setTextColor(AnsiTerminal.Color.BLUE);
         terminal.setBackgroundColor(AnsiTerminal.Color.WHITE, false);
-        terminal.moveTo(9, yPosition);
+        terminal.moveTo(13, yPosition);
         terminal.write(" " + dayOfWeek + ", " + month + " " + date + " " + year + " ");
     }
 }

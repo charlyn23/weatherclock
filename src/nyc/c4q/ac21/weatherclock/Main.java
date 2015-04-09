@@ -20,12 +20,12 @@ public class Main {
 
         // Set Alarm
         Scanner input = new Scanner(System.in);
-        System.out.println("Set your alarm time (ie 7:00am): ");
+        System.out.println("Set your alarm time: ");
         String ap, alarm = input.next();
         String[] time = new String[2];
         boolean am = true;
 
-        if (alarm.matches("[0-2]?\\d:[0-5]\\d[a|A|p|P][m|M]")) {
+        if (alarm.matches("[0-2?]\\d:[0-5]\\d[a|A|p|P][m|M]")) {
             time = alarm.split(":");
             ap = time[1].substring(2);
             time[1] = time[1].substring(0, 2);
@@ -94,11 +94,16 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
-            if (alarm != null) {
-                Alarm.setAlarm(cal, am, time, hour, min, sec);
+            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
+                Alarm.alarm();
+                terminal.setTextColor(Alarm.colorChange());
+            } else if (alarm != null) {
+                terminal.moveTo(numRows, 0);
+                terminal.write("\u23F0" + "  " + alarm);
             }
 
             // print Clock
+            terminal.setTextColor(AnsiTerminal.Color.CYAN);
             Clock.printHour(hour, hour1, hour2);
             Clock.printColon(- 14);
             Clock.printMin(min, min1, min2);
@@ -106,7 +111,7 @@ public class Main {
             Clock.printSec(sec, sec1, sec2);
 
             // print AM/PM
-            terminal.moveTo(7, yClock + 34);
+            terminal.moveTo(11, yClock + 34);
             if (cal.get(Calendar.HOUR_OF_DAY) >= 12)
                 terminal.write("PM");
             else
@@ -119,59 +124,59 @@ public class Main {
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
             terminal.setTextColor(AnsiTerminal.Color.MAGENTA);
             for (int i = 0; i < Ascii.printCity().size(); i++) {
-                terminal.moveTo(11 + i, 0);
+                terminal.moveTo(15 + i, 4);
                 terminal.write(Ascii.printCity().get(i));
-            }
-
-
-            // print calendar
-            int xCalendar = numRows - 5;
-            terminal.setTextColor(AnsiTerminal.Color.CYAN);
-            for (int i = 0; i < CalendarPrinter.getCalendar(cal).size(); i++) {
-                terminal.moveTo(xCalendar + i, numCols-26);
-                terminal.write(CalendarPrinter.getCalendar(cal).get(i));
             }
 
             //Write sunrise time
             String sunriseEmoji = new String(new int[] { 0x1F305 }, 0, 1);
             String sunriseTime = DateTime.formatTime(sunrise, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(13, 5);
-            terminal.write(sunriseEmoji + "sunrise at " + sunriseTime);
+            terminal.moveTo(19, 20);
+            terminal.write(sunriseEmoji + "  sunrise at " + sunriseTime);
 
             // Write sunset time in dark yellow.
             String sunsetEmoji = new String (new int[] {0x1F307}, 0, 1);
             String sunsetTime = DateTime.formatTime(sunset, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(15, xPosition + 1);
-            terminal.write(sunsetEmoji + "sunset at " + sunsetTime);
+            terminal.moveTo(20, 20);
+            terminal.write(sunsetEmoji + "  sunset at " + sunsetTime);
 
             //Write wind direction
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(17, xPosition + 1);
+            terminal.moveTo(21, 18);
             terminal.write("Wind direction : " + windDirection);
 
             //Write wind speed
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(19, xPosition + 1);
+            terminal.moveTo(22, 22);
             terminal.write("Wind speed: " + windSpeed);
 
             //Write DST
             String date = DateTime.formatDate(cal);
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
-            terminal.moveTo(21, xPosition + 1);
+            terminal.moveTo(23, 25);
             terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
 
             //Write newsfeed
-            terminal.moveTo(20, xPosition + 1);
-            terminal.setTextColor(AnsiTerminal.Color.CYAN);
+            terminal.moveTo(3, 0);
+            terminal.setTextColor(AnsiTerminal.Color.WHITE);
             newsOffset+=4;
-            terminal.write(news.substring(newsOffset++, numCols+newsOffset ));
+            terminal.write(news.substring(newsOffset++, numCols+newsOffset - 1));
             if (numCols+newsOffset+5 >= news.length()) {
                 newsOffset = 0;
             }
 
+            // print calendar
+            int xCalendar = numRows - 6;
+            terminal.setTextColor(AnsiTerminal.Color.CYAN);
+            for (int i = 0; i < CalendarPrinter.getCalendar(cal).size(); i++) {
+                terminal.moveTo(xCalendar + i, 16);
+                terminal.write(CalendarPrinter.getCalendar(cal).get(i));
+            }
+
             // Pause for one second, and do it again.
+            terminal.reset();
             DateTime.pause(1.0);
         }
     }
