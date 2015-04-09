@@ -117,8 +117,9 @@ public class Main {
             else
                 terminal.write("AM");
 
-            // Write the date
+            // print date & holiday if today is a national holiday
             Clock.printDate(cal);
+            Holiday.printHolidays(Holiday.getHoliday("National holiday"), cal);
 
             // print location
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
