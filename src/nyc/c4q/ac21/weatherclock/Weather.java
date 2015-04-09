@@ -10,11 +10,11 @@ public class Weather {
     final static AnsiTerminal terminal = new AnsiTerminal();
     final static int numCols = TerminalSize.getNumColumns();
     final static int yPosition = numCols / 2 - 11;
-    private static URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
-    private static String doc = HTTP.get(url);
-    private static JSONObject obj = (JSONObject) JSONValue.parse(doc);
 
     public static String weatherInfo() {
+        URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
+        String doc = HTTP.get(url);
+        JSONObject obj = (JSONObject) JSONValue.parse(doc);
         JSONArray weather = (JSONArray) obj.get("weather");
         if (weather == null)
             return null;
@@ -43,10 +43,7 @@ public class Weather {
 
     public static void printWeather(long id){
         int xPosition = 10;
-        id = TPH.getID();
-
         if(id >= 200 && id <= 232) {  // thunderstorm
-            //print thunderstorm ascii
             for (int i = 0; i < Ascii.thunder().size(); i++) {
                 terminal.moveTo(11 + i, numCols- 10);
                 terminal.write(Ascii.thunder().get(i));
