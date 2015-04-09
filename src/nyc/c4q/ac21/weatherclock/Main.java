@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -49,9 +50,16 @@ public class Main {
         //Get wind speed and direction
         Double windSpeed = WindSpeed.getWindSpeed();
         String windDirection = WindDirection.getWindDirection();
+        //Get headlines
+       ArrayList<String> newsfeed =  NewsGrabber.getHeadlines();
+        String news = "";
+        for (int i = 0; i < newsfeed.size(); i++) {
+            news += ".   " + newsfeed.get(i);
+        }
 
         //int xPosition = 1 + numCols / 2 - 5;
         int xPosition = numCols;
+        int newsOffset = 0;
         while (true) {
             // Get the current date and time.
             Calendar cal = Calendar.getInstance();
@@ -122,8 +130,8 @@ public class Main {
             String sunriseEmoji = new String(new int[] { 0x1F305 }, 0, 1);
             String sunriseTime = DateTime.formatTime(sunrise, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(13, numCols + 50);
-            terminal.write(sunriseEmoji + " sunrise at " + sunriseTime);
+            terminal.moveTo(13, 5);
+            terminal.write(sunriseEmoji + "sunrise at " + sunriseTime);
 
             // Write sunset time in dark yellow.
             String sunsetEmoji = new String (new int[] {0x1F307}, 0, 1);
@@ -147,6 +155,16 @@ public class Main {
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
             terminal.moveTo(21, xPosition + 1);
             terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
+
+            //Write newsfeed
+            terminal.moveTo(20, xPosition + 1);
+            terminal.setTextColor(AnsiTerminal.Color.CYAN);
+            newsOffset+=4;
+            terminal.write(news.substring(newsOffset++, numCols+newsOffset ));
+            if (numCols+newsOffset+5 >= news.length()) {
+                newsOffset = 0;
+            }
+
             // Pause for one second, and do it again.
             DateTime.pause(1.0);
         }
