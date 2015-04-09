@@ -95,7 +95,9 @@ public class Main {
 
             // Alarm goes off
             if (Alarm.isTime(cal, am, time, hour, min, sec)) {
-                Alarm.alarm();
+                for (int i=0; i<24; i++) {
+                    Alarm.alarm();
+                }
                 terminal.setTextColor(Alarm.colorChange());
             } else if (alarm != null) {
                 terminal.moveTo(numRows, 0);

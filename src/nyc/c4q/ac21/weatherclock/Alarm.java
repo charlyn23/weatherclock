@@ -16,8 +16,9 @@ public class Alarm {
     final static AnsiTerminal terminal = new AnsiTerminal();
 
     public static void alarm() {
-        URL url = Clock.class.getResource("/audio/clock-cuckoo2.wav");
+        URL url = Clock.class.getResource("/audio/happy.wav");
         AudioClip clip = Applet.newAudioClip(url);
+        int count = 0;
         clip.play();
     }
 
