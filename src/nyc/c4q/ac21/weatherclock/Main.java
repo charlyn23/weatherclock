@@ -20,7 +20,24 @@ public class Main {
         final AnsiTerminal terminal = new AnsiTerminal();
         DecimalFormat df = new DecimalFormat("#");
 
-        // Set Alarm
+        // When the program shuts down, reset the terminal to its original state.
+        // This code makes sure the terminal is reset even if you kill your
+        // program by pressing Control-C.
+        Runtime.getRuntime().addShutdownHook(new Thread()
+        {
+            public void run()
+            {
+                terminal.showCursor();
+                terminal.reset();
+                terminal.scroll(1);
+                terminal.moveTo(numRows, 0);
+            }
+        });
+        terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
+        terminal.clear();
+        terminal.hideCursor();
+        
+         // User input set alarm
         Scanner input = new Scanner(System.in);
         System.out.println("Set your alarm time: ");
         String ap, alarm = input.next();
@@ -40,27 +57,6 @@ public class Main {
             alarm = null;
         }
 
-        // When the program shuts down, reset the terminal to its original state.
-        // This code makes sure the terminal is reset even if you kill your
-        // program by pressing Control-C.
-        Runtime.getRuntime().addShutdownHook(new Thread()
-        {
-            public void run()
-            {
-                terminal.showCursor();
-                terminal.reset();
-                terminal.scroll(1);
-                terminal.moveTo(numRows, 0);
-            }
-        });
-        terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
-        terminal.clear();
-        terminal.hideCursor();
-
-        // Print digital clock
-        int yPosition = 1 + numCols / 2 - 5;
-        int yClock = numCols/2;
-
         // Get sunset time for the current day.
         Calendar sunset = Sunset.getSunset();
         Calendar sunrise = Sunrise.getSunrise();
@@ -72,15 +68,17 @@ public class Main {
         double presh = TPH.getPressure().intValue();
         double humidity = TPH.getHumid();
         //Get headlines
-       ArrayList<String> newsfeed =  NewsGrabber.getHeadlines();
+        ArrayList<String> newsfeed =  NewsGrabber.getHeadlines();
         String news = "";
         for (int i = 0; i < newsfeed.size(); i++) {
             news += ".   " + newsfeed.get(i);
         }
         //Get Current Weather ID
-        String currentWeather = Weather.printWeather(TPH.getID());
+        long currentWeather = TPH.getID();
 
-        //int xPosition = 1 + numCols / 2 - 5;
+        // Print digital clock
+        int yPosition = 1 + numCols / 2 - 5;
+        int yClock = numCols/2;
         int xPosition = numCols;
         int newsOffset = 0;
         while (true) {
@@ -195,7 +193,7 @@ public class Main {
 
             //Print weather condition ASCII
             terminal.setTextColor(AnsiTerminal.Color.WHITE);
-
+            Weather.printWeather(currentWeather);
 
             // Pause for one second, and do it again.
             terminal.reset();
