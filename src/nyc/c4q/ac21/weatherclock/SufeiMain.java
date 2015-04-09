@@ -1,108 +1,105 @@
 //package nyc.c4q.ac21.weatherclock;
+//import org.json.simple.JSONArray;
+//import org.json.simple.JSONObject;
+//import org.json.simple.JSONValue;
+//import org.json.simple.parser.JSONParser;
+//import java.net.URL;
 //
-//import java.util.Calendar;
-//import java.util.Scanner;
+//public class WeatherParse {
+//    final static AnsiTerminal terminal = new AnsiTerminal();
+//    final static int numCols = TerminalSize.getNumColumns();
+//    final static int yPosition = numCols / 2 - 11;
+//    private static URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
+//    private static String doc = HTTP.get(url);
+//    private static JSONObject obj = (JSONObject) JSONValue.parse(doc);
 //
-///**
-// * Created by sufeizhao on 4/7/15.
-// */
-//public class SufeiMain {
-//    public static void main(String[] args) {
-//        final int numCols = TerminalSize.getNumColumns();
-//        final int numRows = TerminalSize.getNumLines();
-//        final AnsiTerminal terminal = new AnsiTerminal();
+//    public static String weatherInfo() {
+//        JSONArray weather = (JSONArray) obj.get("weather");
+//        if (weather == null)
+//            return null;
+//        JSONObject mainWeather = (JSONObject) weather.get(0);
+//        String description = (String) mainWeather.get("description");
+//        if (description == null)
+//            return null;
+//        return description;
+//    }
 //
-//        // Set Alarm
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Set your alarm time (ie 7:00am): ");
-//        String alarm = input.next(), ap;
+//    public static Integer getId(){
+//        JSONParser parser = new JSONParser();
+//        URL url = HTTP
+//                .stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
+//        String doc = HTTP.get(url);
+//        JSONObject obj = (JSONObject) JSONValue.parse(doc);
+//        JSONArray mainWeather = (JSONArray) obj.get("weather");
+//        if (mainWeather == null)
+//            return null;
+//        JSONObject mainW = (JSONObject) mainWeather.get(0);
+//        if (mainWeather == null)
+//            return null;
+//        Integer id1 = (Integer) obj.get("id") ;
+//        return id1;
+//    }
 //
-//        // When the program shuts down, reset the terminal to its original state.
-//        // This code makes sure the terminal is reset even if you kill your
-//        // program by pressing Control-C.
-//        Runtime.getRuntime().addShutdownHook(new Thread() {
-//            public void run() {
-//                terminal.showCursor();
-//                terminal.reset();
-//                terminal.scroll(1);
-//                terminal.moveTo(numRows, 0);
+//    public static void printWeather(int id){
+//        int xPosition = 10;
+//
+//        if(id >= 200 && id <= 232) {  // thunderstorm
+//            //print thunderstorm ascii
+//            for (int i = 0; i < Ascii.thunder().size(); i++) {
+//                terminal.moveTo(11 + i, numCols- 10);
+//                terminal.write(Ascii.thunder().get(i));
 //            }
-//        });
-//        terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
-//        terminal.clear();
-//        terminal.hideCursor();
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
 //
-//        // Print digital clock
-//        int yPosition = 1 + numCols / 2 - 5;
-//        int yClock = numCols/2;
-//        while (true) {
-//            // Get the current date and time.
-//            Calendar cal = Calendar.getInstance();
-//            int hour = cal.get(Calendar.HOUR);
-//            int hour1 = cal.get(Calendar.HOUR) / 10;
-//            int hour2 = cal.get(Calendar.HOUR) % 10;
-//            if (hour == 0) {
-//                hour = 12;
-//                hour1 = 1;
-//                hour2 = 2;
+//        } else if (id >= 300 && id <= 531){
+//            //print rain ascii
+//            for (int i = 0; i < Ascii.rain().size(); i++) {
+//                terminal.moveTo(11 + i, numCols- 10);
+//                terminal.write(Ascii.rain().get(i));
 //            }
-//            int min = cal.get(Calendar.MINUTE);
-//            int min1 = cal.get(Calendar.MINUTE) / 10;
-//            int min2 = cal.get(Calendar.MINUTE) % 10;
-//            int sec = cal.get(Calendar.SECOND);
-//            int sec1 = cal.get(Calendar.SECOND) / 10;
-//            int sec2 = cal.get(Calendar.SECOND) % 10;
-//
-//            // Alarm goes off
-//            Alarm.setAlarm(cal, alarm, hour, min, sec);
-//
-//            // print Clock
-//            Clock.printHour(hour, hour1, hour2);
-//            Clock.printColon(-14);
-//            Clock.printMin(min, min1, min2);
-//            Clock.printColon(10);
-//            Clock.printSec(sec, sec1, sec2);
-//
-//            // print AM/PM
-//            terminal.moveTo(7, yClock + 34);
-//            if (cal.get(Calendar.HOUR_OF_DAY) >= 12)
-//                terminal.write("PM");
-//            else
-//                terminal.write("AM");
-//
-//            // Write the date
-//            Clock.printDate(cal);
-//
-//            // print location
-//            terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
-//            terminal.setTextColor(AnsiTerminal.Color.MAGENTA);
-//            for (int i = 0; i < Ascii.printCity().size(); i++) {
-//                terminal.moveTo(10 + i, 0);
-//                terminal.write(Ascii.printCity().get(i));
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
+//        } else if (id >= 600 && id <= 622){
+//            //print snow ascii
+//            for (int i = 0; i < Ascii.snow().size(); i++) {
+//                terminal.moveTo(11 + i, numCols - 10);
+//                terminal.write(Ascii.snow().get(i));
 //            }
-//
-//            // print sun
-//            terminal.setTextColor(AnsiTerminal.Color.YELLOW);
-//            for (int i = 0; i < Ascii.day1().size(); i++) {
-//                if (i%2==0) {
-//                    terminal.moveTo(2 + i, 0);
-//                    terminal.write(Ascii.day1().get(i));
-//                } else {
-//                    terminal.moveTo(2 + i, 0);
-//                    terminal.write(Ascii.day2().get(i));
-//                }
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
+//        } else if (id >= 701 && id <= 781){
+//            //print atmosphere
+//            for (int i = 0; i < Ascii.face().size(); i++) {
+//                terminal.moveTo(11 + i, numCols- 10);
+//                terminal.write(Ascii.face().get(i);
 //            }
-//
-//            // print calendar
-//            int xCalendar = numRows - 5;
-//            terminal.setTextColor(AnsiTerminal.Color.CYAN);
-//            for (int i = 0; i < CalendarPrinter.getCalendar(cal).size(); i++) {
-//                terminal.moveTo(xCalendar + i, numCols-26);
-//                terminal.write(CalendarPrinter.getCalendar(cal).get(i));
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
+//        } else if (id == 800){
+//            //print sun
+//            for (int i = 0; i < Ascii.sun().size(); i++) {
+//                terminal.moveTo(11 + i, numCols- 10);
+//                terminal.write(Ascii.sun().get(i);
 //            }
-//
-//            // Pause for one second, and do it again.
-//            DateTime.pause(1.0);
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
+//        } else if (id > 800 && id <= 804){  //cloud
+//            //print cloud ascii
+//            for (int i = 0; i < Ascii.cloud().size(); i++) {
+//                terminal.moveTo(11 + i, numCols- 10);
+//                terminal.write(Ascii.cloudy().get(i));
+//            }
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
+//        } else if (id >= 900 && id <= 906){
+//            //print extreme face ascii
+//            for (int i = 0; i < Ascii.extreme().size(); i++) {
+//                terminal.moveTo(11 + i, numCols - 10);
+//                terminal.write(Ascii.extreme().get(i));
+//            }
+//            terminal.moveTo(16,numCols- 10);
+//            terminal.write(weatherInfo());
 //        }
 //    }
 //}
