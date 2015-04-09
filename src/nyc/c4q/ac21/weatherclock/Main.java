@@ -115,6 +115,7 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
+            terminal.setTextColor(AnsiTerminal.Color.CYAN);
             if (Alarm.isTime(cal, am, time, hour, min, sec)) {
                 Alarm.alarm();
                 terminal.setTextColor(Alarm.colorChange());
@@ -124,7 +125,6 @@ public class Main {
             }
 
             // print Clock
-            terminal.setTextColor(AnsiTerminal.Color.CYAN);
             Clock.printHour(hour, hour1, hour2);
             Clock.printColon(- 14);
             Clock.printMin(min, min1, min2);
@@ -140,12 +140,13 @@ public class Main {
 
             // Write the date
             Clock.printDate(cal);
+            Holidays.printHolidays(Holidays.getHolidays("National holiday"), cal);
 
             // print location
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
             terminal.setTextColor(AnsiTerminal.Color.MAGENTA);
             for (int i = 0; i < Ascii.printCity().size(); i++) {
-                terminal.moveTo(14 + i, 4);
+                terminal.moveTo(15 + i, 4);
                 terminal.write(Ascii.printCity().get(i));
             }
 
@@ -153,40 +154,40 @@ public class Main {
             String sunriseEmoji = new String(new int[] { 0x1F305 }, 0, 1);
             String sunriseTime = DateTime.formatTime(sunrise, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(17, 20);
+            terminal.moveTo(20, 30);
             terminal.write(sunriseEmoji + "  sunrise at " + sunriseTime);
 
             // Write sunset time in dark yellow.
             String sunsetEmoji = new String (new int[] {0x1F307}, 0, 1);
             String sunsetTime = DateTime.formatTime(sunset, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(18, 20);
+            terminal.moveTo(21, 30);
             terminal.write(sunsetEmoji + "  sunset at " + sunsetTime);
 
 
             // Temperature, Pressure, Humidity
             terminal.setTextColor(AnsiTerminal.Color.RED, false);
-            terminal.moveTo(19, 20);
+            terminal.moveTo(22, 30);
             terminal.write("Temperature : " + df.format(temp) + " F");
-            terminal.moveTo(20, 20);
+            terminal.moveTo(23, 30);
             terminal.write("Pressure : " + df.format(presh) + " inHg");
-            terminal.moveTo(21, 22);
+            terminal.moveTo(24, 32);
             terminal.write("Humidity : " + humidity + "%");
 
             //Write wind direction
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(22, 18);
+            terminal.moveTo(26, 28);
             terminal.write("Wind direction : " + windDirection);
 
             //Write wind speed
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(23, 22);
+            terminal.moveTo(26, 32);
             terminal.write("Wind speed: " + windSpeed);
 
             //Write DST
             String date = DateTime.formatDate(cal);
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
-            terminal.moveTo(24, 25);
+            terminal.moveTo(27, 35);
             terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
 
             //Write newsfeed
@@ -199,10 +200,9 @@ public class Main {
             }
 
             // print calendar
-            int xCalendar = numRows - 6;
             terminal.setTextColor(AnsiTerminal.Color.CYAN);
             for (int i = 0; i < CalendarPrinter.getCalendar(cal).size(); i++) {
-                terminal.moveTo(xCalendar + i, 16);
+                terminal.moveTo(18 + i, numCols - 40);
                 terminal.write(CalendarPrinter.getCalendar(cal).get(i));
             }
 
@@ -211,9 +211,9 @@ public class Main {
             Weather.printWeather(currentWeather, weatherInfo);
             
             //Print word of day
-            terminal.moveTo(numRows - 4, numCols - 25);
+            terminal.moveTo(numRows - 5, numCols - 38);
             terminal.write("Zulu word of the day: " + wordOfDay);
-            terminal.moveTo(numRows - 3, numCols - 25);
+            terminal.moveTo(numRows - 4, numCols - 38);
             terminal.write(wordOfDay);
 
             // Pause for one second, and do it again.

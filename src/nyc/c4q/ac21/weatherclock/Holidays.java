@@ -40,17 +40,18 @@ public class Holidays {
     
     public static void printHolidays(HashMap<Calendar, String> holidays, Calendar cal){
         int yPosition = numCols / 2 - 11;
+        String smiley = new String(new int[] {0x263A}, 0, 1);
         String holiday;
 
         if(holidays.containsKey(cal)) {
             holiday = "National Holiday:  " + holidays.get(cal);
         }
         else {
-            holiday = "";
+            holiday = smiley + " It's a normal day " + smiley;
         }
 
         terminal.setTextColor(AnsiTerminal.Color.BLUE);
-        terminal.moveTo(14, yPosition);
+        terminal.moveTo(14, yPosition + 2);
         terminal.write(holiday);
     }
 }
