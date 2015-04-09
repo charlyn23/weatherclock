@@ -1,0 +1,1110 @@
+Afrikaans: iBhunu, iliBhunu 
+Afrikaner: iBhunu, iliBhunu 
+Amanzimtoti: eManzimtoti 
+America: eMelika 
+April: uApreli 
+Bible: iBhayibheli, iliBhayibheli 
+Boer: iBhunu, iliBhunu 
+Cape Province: eKapa 
+Christmas: uKhisimuzi 
+December: uDisemba 
+Dundee: eDandi 
+Durban: eThekwini 
+Dutchman: umHholandi | 2. umHholandi 
+East London: eMonti 
+England: eNgilandi | 2. eNgilandi 
+English: isiNgisi 
+Englishman: iNgisi, umNgisi 
+English language: isiNgisi 
+European: umlungu 
+February: uFebruwari 
+French: isiFulentshi 
+Frenchman: iFulentshi
+French language: isiFulentshi 
+Friday: uLwesihlanu 
+German: isiJalimane | 2. iJalimane, iliJalimane 
+Germany: eJalimani 
+German language: isiJalimane 
+Germiston: eDukathole 
+God: uNkulunkulu 
+Hollander: umHholandi 
+Johannesburg: eGoli 
+July: uJulayi 
+June: uJuni 
+Ladysmith: eMnambithi 
+London: eLandani 
+March: uMashi 
+May: uMeyi 
+Miss: inkosazana 
+Mister: ubaba 
+Monday: umSombuluko 
+Mr.: ubaba 
+Mrs.: inkosikazi, uma 
+Ndebele: isiNdebele | 2. iNdebele 
+Ndebele language: isiNdebele 
+Nelspruit: eNelspotho 
+October: uOktoba 
+Pedi: isiPedi | 2. umPedi 
+Pedi language: isiPedi 
+Pietermaritzburg: eMalitzboko, eMungundlovu 
+Port Elizabeth: eBhayi 
+Pretoria: ePitoli 
+Sabbath: uMgqibelo 
+Sassenach: iNgisi, umNgisi 
+Saturday: uMgqibelo 
+Saviour: uMsindisi 
+Scot: isiKoshi 
+Scotsman: isiKoshi 
+Sotho: isiSuthu | 2. umSuthu 
+Sotho language: isiSuthu 
+Soweto: eSoweto 
+Sunday: iliSonto, iSonto 
+Swazi: isiSwati | 2. umSwati 
+Swazi language: isiSwati 
+TV set: umabonwakude 
+Thursday: uLwesine 
+Tsonga: isiTsonga | 2. umTsonga 
+Tsonga language: isiTsonga 
+Tuesday: uLwesibili 
+Umlazi: eMlazi 
+Venda: isiVenda | 2. umVenda 
+Venda language: isiVenda 
+Vryheid: eFilidi 
+Wednesday: uLwesithathu 
+Xhosa: isiXhosa | 2. umXhosa 
+Xhosa language: isiXhosa 
+Yule: uKhisimuzi 
+Zulu: isiZulu | 2. umZulu 
+Zululand: KwaZulu 
+Zulu language: isiZulu 
+abatement: isephulelo 
+aberration: isiphosiso 
+abet: ukunceda, ukusiza 
+abide: ukulinda | 2. ukuhlupheka 
+abort: ukuehluleka 
+abroad: phandle 
+abscond: ukubaleka 
+absent onself: ukuhamba 
+academic: isitshudeni 
+accept: ukuamukela 
+accomodate: ukuqeda | 2. ukunceda, ukusiza 
+account: iakhawunti | 2. ukuethemba 
+accredit: ukuethemba 
+accustom: ukuejwayele 
+ache: ukubuhlungu 
+achieve: ukuenza 
+acknowledgement: ilirisidi, irisidi 
+acolyte: lilunga, ilunga 
+acquire: ukuthenga 
+act: ukuenza 
+actually: eqinisweni 
+address: ikheli, ilikheli 
+adieu: hamba kahle 
+administration: uhulumeni 
+adult: umuntu osekhulile 
+advocate: ummeli 
+aerodrome: inkundla yezindiza 
+aeroplane: indiza 
+affair: indaba 
+after: emuva | 2. emuva, emva kwa- 
+afternoon: intambama 
+age: ubudala 
+agreed: kulungile 
+ague: imfiva 
+ahead: phambili 
+aid: ukunceda, ukusiza | 2. ulusizo, usizo | 3. ukunceda, ukusiza | 4. ulusizo, usizo 
+air: umoya 
+aircraft: indiza 
+airdrome: inkundla yezindiza 
+airfield: inkundla yezindiza 
+airplane: indiza 
+airport: inkundla yezindiza 
+ale: ubhiya, utshwala 
+all the: -nke 
+alone: -dwa 
+also: futhi 
+among: phakathi kwa- 
+angle: ikhona, ilikhona 
+animal: isilwane | 2. inkomo 
+another: -nye 
+answer: ukuphendula 
+anything: into, noma yini 
+appellation: igama, iligama 
+apple: ihabhula, ilihabhula 
+appreciate: ukuthanda 
+arise: ukuzalwa 
+arrive: ukufika 
+as: kanjani | 2. kanjani | 3. kanjalo | 4. ngoba 
+ask: ukubuza 
+assist: ukunceda, ukusiza | 2. ukunceda, ukusiza 
+as a matter of fact: eqinisweni 
+at: eduze 
+attempt: ukuzama 
+attend: ukuvakashela 
+at home: ekhaya 
+at last: ekugcineni 
+at present: manje 
+at that place: lapho 
+audit: ukuhlola 
+autobus: ibhasi, ilibhasi 
+autumn: ikwindla 
+await: ukulinda 
+away: kude 
+a little: kancane 
+bad: -bi, -bolile 
+badly: kabi 
+bag: isaka, isikhwama | 2. isaka, isikhwama 
+bairn: ingane, umntwana 
+bakery: ibhikawosi 
+ball: ibhola 
+banana: ubhanana | 2. ubhanana 
+bank: ibhange 
+barrister-at-law: ummeli 
+barrister: ummeli 
+basket: ibhasikidi, ilibhasikidi 
+bath: ibhavu 
+beach: ibhishi, ilibhishi 
+beam: ilirediyo, irediyo, umsakazo 
+bean: ubhontshisi 
+bear: ukuhlupheka 
+beast: inkomo 
+beautiful: -bukekayo, -hle 
+because: ngoba | 2. ngoba | 3. ngoba 
+bed: umbhede 
+beer: ubhiya, utshwala 
+before: phambi kwa- 
+begin: ukuqala 
+behind: emuva | 2. emuva, emva kwa- 
+believe: ukuethemba 
+below: phansi | 2. phansi kwa- | 3. phansi 
+beneath: phansi kwa- 
+beside: eduze 
+better: -ngcono 
+between: phakathi kwa- 
+beverage: isiphuzo 
+be acquainted with: ukuazi 
+be afraid of: ukuesaba 
+be alive: ukuphila 
+be born: ukuzalwa 
+be different: ukuehlukile 
+be full: ukusuthi 
+be hungry: ukulambile 
+be in the habit of: ukuejwayele 
+be painful: ukubuhlungu 
+be quiet: ukuthula 
+be thirsty: ukuomile 
+be willing to: ukufuna 
+bicycle: ibhayisikili, ilibhayisikili 
+bike: ibhayisikili, ilibhayisikili 
+bill: ilithikithi, ithikithi | 2. iakhawunti 
+bird: inyoni 
+birthday: usuku lokuzalwa 
+bit: isiqhephu 
+black: -mnyama 
+black rhinoceros: ubhejane 
+blank: -mhlophe 
+bleak: -bandayo 
+bless: ukubusisa 
+blood: igazi, iligazi 
+blushing: -bomvu 
+boat: umkhumbi 
+boil: ukubila 
+book: ibhuku, ilibhuku, incwadi 
+border: ilirandi, irandi 
+borrow: ukuboleka | 2. ukuboleka 
+boss: umakhonya | 2. umakhonya | 3. inkosi 
+both: kokubili 
+bottle: ibhodlela, ilibhodlela 
+boutique: isitolo 
+box: ibhokisi 
+boy: umfana 
+bread: isinkwa 
+breakfast: ibhulakufesi, ilibhulakufesi 
+brim: ilirandi, irandi 
+bring: ukuletha 
+brink: ilirandi, irandi 
+broad: -banzi 
+brother: ubhuti 
+brown: -bomvu, -nsundu 
+buffalo: inyathi 
+build: ukuakha 
+bulk: usayizi 
+bull: inkunzi 
+bureau: ihhovisi, ilihhovisi 
+burglar: umgqekezi 
+burglar alarm: izihlabamkhosi 
+burial: umngcwabo | 2. umngcwabo 
+bus: ibhasi, ilibhasi 
+business: indaba 
+businessman: usomabhizinizi | 2. usomabhizinizi 
+business deal: indaba 
+but: kodwa | 2. nokho 
+butter: ibhotela, ilibhotela 
+buy: ukuthenga | 2. ukuthenga | 3. ukuthenga | 4. ukuthenga | 5. ukuthenga | 6. ukuthenga 
+by: eduze 
+bye: hamba kahle 
+café: ikhefi, ilikhefi 
+cake: ikhekhe, ilikhekhe 
+calculation: iakhawunti 
+calf: inkonyane 
+call: ukubiza 
+call on: ukuvakashela 
+car: imoto 
+carrot: ikherothi, ilikherothi 
+case: indaba 
+cat: ikati, ilikati 
+cauliflower: ukholifulawa 
+chair: isihlalo 
+chamber: indawo, ikamelo, ilikamelo 
+chance: ilithuba, ithuba 
+change: imfalakahlana 
+cheap: -shibile | 2. -shibile 
+check: ukuhlola | 2. ilisheke, isheke 
+check up on: ukuhlola 
+cheers: impilontle 
+cheese: ushizi 
+chemist: ikhemisi, ilikhemisi 
+cheque: ilisheke, isheke 
+chest: isifuba 
+chief: umakhonya | 2. inkosi 
+child: ingane | 2. ingane, umntwana | 3. ingane, umntwana 
+chilly: -bandayo 
+choose: ukukhetha 
+cinema: ibhayisikobho, ilibhayisikobho 
+cistern: ilitanki, itanki 
+city: idolobha, ilidolobha 
+class: ikilasi, ilikilasi 
+clean: -hlanzekileyo 
+clerk: umabhalane 
+client: ikhasimende, ilikhasimende 
+cloud: ifu 
+coffee-house: ikhefi, ilikhefi 
+coffee: ikhofi, ilikhofi 
+cold: -bandayo | 2. umkhuhlane | 3. umkhuhlane 
+colour: umbala 
+come: ukufika, ukuza 
+come about: ukuenzeka 
+come across: ukuhlangana 
+come back: ukubuya 
+come to an end: ukugcina 
+commence: ukuqala 
+commend: ukuphakamisa 
+competition: umncintiswano 
+complain: ukukhala 
+complete: ukuqeda 
+computer: ikompiyutha 
+concert: ikhonsathi, ilikhonsathi 
+confide: ukuethemba 
+conserve: ukugcina 
+consider: ukubukela 
+construct: ukuakha 
+continue: ukuqhubeka 
+cook: ukupheka | 2. pheka 
+cord: intambo 
+corner: ikhona, ilikhona 
+correct: -phakeme 
+costly: -bizayo 
+cough: ukukhwehlela 
+counsel: ummeli 
+counter: ikhawunda, ilikhawunda 
+course: ilipuleti, ipuleti, isitsha 
+cream: ulaza 
+cucumber: ikhukhamba 
+cup: inkomishi 
+cure: ukupholisa 
+currently: okwamanje 
+curtain: ikhethini, ilikhethini 
+custom: ilisiko, isiko 
+customer: ikhasimende, ilikhasimende 
+cut: ukusika 
+cycle: ibhayisikili, ilibhayisikili 
+daily paper: inyuziphepha 
+dam: idamu, ilidamu 
+danger: inngozi 
+date: idethi, ilidethi 
+daughter: indodakazi 
+day: umhla, ulusuku, usuku 
+dear: -bizayo | 2. -bizayo | 3. -bizayo 
+deem: ukuethemba | 2. ukubukela 
+delete: ukuesula, ukusula 
+deliver: ukudiliva 
+dentist: udokotela wamazinyo 
+deny: ukuphikisa 
+depart: ukuhamba 
+desire: ukufisa 
+dialogue: ingxoxo 
+differ: ukuehlukile 
+difficult: -nzima 
+dimension: usayizi 
+diminutive: -ncane 
+discount: isephulelo 
+dish: ilipuleti, ipuleti, isitsha | 2. ilipuleti, ipuleti, isitsha 
+dispose of: ukuthengisa 
+distant: -de 
+do: ukuenza 
+doctor: udokotela 
+don't mention it: akunandaba 
+door: umnyango 
+downstairs: phansi 
+dozen: idazini, ilidazini 
+dress: ililokwe, ilokwe 
+drink: isiphuzo | 2. ukuphuza 
+drive: ukushayela 
+driving-licence: ilayisense lokushayela, ililayisense lokushayela 
+drug: umuthi 
+duck: idada 
+dye: umbala 
+each: -nke 
+eagle: ukhozi, ulukhozi 
+ear: indlebe 
+earn: ukuhola, ukuwina 
+edge: ilirandi, irandi 
+edging: ilirandi, irandi 
+egg: iliqanda, iqanda 
+eight: isishiyagalombili 
+eighteen: ishumi nesishiyagalombi 
+elbow: indolowane 
+elect: ukukhetha 
+elephant: indlovu 
+eleven: ishumi nanye 
+else: -nye 
+employ: ukusebenzisa 
+encounter: ukuhlangana | 2. umhlangano 
+end: ukuqeda | 2. ukugcina 
+endure: ukuqhubeka | 2. ukuhlupheka 
+end up: ukufika | 2. ukugcina 
+engine: umshini | 2. injini 
+engineer: unjiniyela 
+enter: ukungena 
+entrust: ukuethemba 
+errand: umbiko, umumayalezo 
+error: isiphosiso 
+estate: ilipulazi, ipulazi 
+evening: isikhathi sakusihlwa 
+event: ilithuba, ithuba 
+every: -nke 
+everybody: -nke 
+every one: -nke 
+examine: ukuhlola 
+exclusively: kuphela 
+excuse me: ngiyaxolisa, nxephe 
+expect: ukulinda 
+expensive: -bizayo | 2. -bizayo 
+expire: ukugcina 
+extend: usayizi 
+eye: ihlo 
+face: ubuso 
+factory: ifektri, ilifektri | 2. ifektri, ilifektri 
+fail: ukuehluleka 
+family: umuzi 
+far: -de 
+farewell: hamba kahle 
+farm: ilipulazi, ipulazi 
+fast: ngokushesha 
+father: ubaba | 2. ubaba 
+fear: ukuesaba 
+fellow: indoda 
+fetch: ukuletha 
+fever: imfiva 
+fifteen: ishumi nesihlanu 
+fill: ukugcwalisa 
+fill in: ukugcwalisa 
+fill up: ukugcwalisa 
+film: ifilimu, ilifilimu 
+finally: ekugcineni 
+find: ukuthola 
+fine: -bukekayo, -hle 
+finish: ukuqeda 
+first: ukuqala 
+firstly: ukuqala 
+first name: isibongo 
+first of all: ukuqala 
+fish: inhlanzi 
+five: -hlanu 
+float: ukubhukuda 
+flu: imfluwenza 
+follow: ukulandelayo 
+following: -landelayo 
+food: ukudla | 2. ukudla 
+foot: unyawo | 2. unyawo 
+for: ngoba 
+force: amandla 
+forget: ukukhohlwa 
+forgive: ukuxolela 
+form: ifomu, ilifomu 
+formerly: phambili 
+fortunately: ngenhlanhla 
+for the reason that: ngoba | 2. ngoba 
+four: -ne 
+fourteen: -yishumi nane 
+frequently: kaningi 
+friend: umngane 
+fringe: ilirandi, irandi 
+frog: ixoxo 
+fruit: isithelo 
+funeral: umngcwabo | 2. umngcwabo 
+furnish: ukudiliva 
+gain: ukuhola, ukuwina 
+garage: igalaji, iligalaji 
+garden: ingadi 
+gasolene: uphetroli 
+gasoline: uphetroli 
+gate: ilisango, isango 
+gateway: ilisango, isango 
+gazette: iliphephandaba, inuyziphepha, iphephandaba 
+gentleman: ubaba 
+get: ukufika | 2. ukuthatha 
+get up: ukusukuma | 2. ukusukuma 
+gift: isipho 
+girl: intombazane, intombi 
+give: ukuazisa, ukuethula 
+give an account: ukubika 
+glass: ingilazi 
+glasses: izibuko 
+go: ukuhamba, ukuya 
+goat: imbuzi 
+golf: igalofu, iligalofu 
+good: -hle 
+goodbye: hamba kahle 
+good day: sawubona 
+good health: impilontle 
+goose: ihansi 
+government: uhulumeni 
+gown: ililokwe, ilokwe 
+go away: ukuhamba 
+go back: ukubuya 
+go in: ukungena 
+grandmother: ugogo 
+grip: imfluwenza 
+grown-up: umuntu osekhulile 
+guarantee: igaranti, iligaranti 
+habit: ilisiko, isiko 
+hair: ulunwele, unwele 
+half: ingxenye yesibili, uhafu 
+hand: isisebenzi | 2. isandla 
+handsome: -bukekayo, -hle 
+hang onto: ukubamba 
+happen: ukuenzeka 
+hard: -nzima 
+have confidence in: ukuethemba 
+have enough: ukusuthi 
+have faith: ukuethemba 
+have faith in: ukuethemba 
+have to: ukufanele 
+head: ikhanda, ilikhanda | 2. ikhanda, ilikhanda | 3. ikhanda, ilikhanda | 4. ikhanda, ilikhanda 
+head of cattle: inkomo 
+heal: ukupholisa 
+heart: inhliziyo 
+heaven: ilizulu, izulu 
+help: ukunceda, ukusiza | 2. ulusizo, usizo | 3. ukunceda, ukusiza | 4. ulusizo, usizo 
+hire: ukuqasha 
+hit: ukungqongqoza 
+hog: ingulube 
+hold: ukubamba 
+holiday: iholide, iliholide 
+home: ikhaya, ilikhaya 
+hope: ukuethemba 
+horse: ihhashi, ilihhashi 
+hospital: isibhedlela 
+hot: -shisayo 
+hotel: ihhotela, ilihhotela 
+hour: ihora 
+house: indlu 
+how: kanjani | 2. kanjani | 3. kanjani 
+however: nokho 
+how are you?: Ninjani?, Unjani?, Wena unjani? 
+how do you do?: Ninjani?, Unjani?, Wena unjani? 
+how many: -ngaki 
+how much: -ngaki 
+hurt: ukubuhlungu 
+husband: indoda, umnyeni 
+hyaena: impisi 
+ice: uayiskhrimu 
+icecream: uayiskhrimu 
+ill: -gulayo 
+important: -phakeme 
+inconvenient: -nzima 
+indeed: eqinisweni 
+indicate: ukukhombisa 
+inexpensive: -shibile | 2. -shibile 
+infant: ingane, umntwana 
+influenza: imfluwenza 
+inject: ukujova 
+injection: umjovo 
+instructor: uthisha 
+insurance: inshuwarensi 
+intention: injongo 
+intercessor: ummeli 
+interest: irente, inzalo 
+interment: umngcwabo | 2. umngcwabo 
+introduce: ukuazisa, ukuethula 
+invitation: isimemo 
+in fact: eqinisweni 
+in front of: phambi kwa- 
+in what way: kanjani | 2. kanjani 
+iron: ayina 
+it doesn't matter: akunandaba 
+jacket: ibhantshi, ilibhantshi 
+jam: ujamu 
+job: umsebenzi 
+journal: inyuziphepha 
+just: kuphela 
+keep: ukugcina 
+keep on: ukuqhubeka 
+key: isikhiye, ukhiye 
+kill: ukubulala 
+kilo: ikhilogramu, ilikhilogramu 
+kilometre: ikhilomitha, ilikhilomitha 
+kind: umhlobo 
+kindness: umusa 
+king: inkosi 
+kitchen: ikhishi, ilikhishi 
+knife: ummese 
+knock: ukungqongqoza 
+know: ukuazi 
+laborer: isisebenzi 
+labourer: isisebenzi 
+lad: umfana 
+laddie: umfana 
+lady: inkosikazi, uma 
+lance: umkhonto 
+language: ulimi, ululimi 
+lass: intombazane, intombi 
+last: ukuqhubeka 
+late: -phuzileyo 
+lawyer: ummeli 
+lay hold of: ukuthatha 
+leader: umakhonya 
+leave: ukuhamba 
+left: -bunxele 
+leg: umlenze | 2. umlenze 
+lend: ukuboleka 
+leopard: ingwe 
+letter: incwadi 
+lettuce: uletisi 
+lie: nga 
+light: isibane 
+like: kanjani | 2. ukuthanda 
+likewise: futhi 
+like that: kanjalo 
+lion: ibhubesi, ilibhubesi 
+lip: udebe, uludebe 
+liquidate: ukubulala 
+list: ilisti, ililisti 
+listen: ukulalela 
+little: -ncane 
+live: ukuphila 
+loaf: isinkwa 
+loan: ukuboleka 
+location: indawo 
+lock: ukukhiya 
+long: -de 
+look: ukubukela 
+look at: ukubukela 
+lord: ubaba 
+lovely: -bukekayo, -hle | 2. -bizayo 
+luck: inhlanhla 
+lump: isiqhephu 
+lunch: ilantshi, ililantshi, indlamini 
+machine: umshini 
+madam: inkosikazi, uma 
+magazine: iliphephandaba, inuyziphepha, iphephandaba 
+mail: iliposi, iposi 
+maintain: ukugcina 
+make: ukuenza 
+make use of: ukusebenzisa 
+male cook: pheka 
+man: indoda 
+manager: ilimeniyu, imeniyu | 2. ilimeniyu, imeniyu, umphathi 
+mango: umango 
+many: -ningi 
+march: ukuhamba 
+marijuana: insangu 
+marmelade: ujamu 
+master: umakhonya 
+matter: indaba 
+maybe: ngabe 
+mayhap: ngabe 
+meal: ukudla 
+meaning: injongo 
+measles: isimungumungwane 
+meat: inyama 
+mechanic: umakhaniki 
+medicine: umuthi 
+meet: ukuhlangana 
+member: lilunga, ilunga 
+merchant: usomabhizinizi | 2. usomabhizinizi 
+message: umbiko, umumayalezo 
+midnight: phakathi kwamabili 
+mile: ilimayela, imayela 
+milk: ubisi, ulubisi 
+miscarry: ukuehluleka 
+miserable: -bi, -bolile | 2. -mpofu 
+mistake: isiphosiso 
+money: imali 
+month: inyanga 
+moon: innyanga 
+more: -ningi 
+morning: ekuseni 
+mother: umame 
+motion picture: ifilimu, ilifilimu 
+motor: injini 
+motorcycle: isithuththu 
+mountain: intaba 
+mouth: umlomo | 2. umlomo | 3. umlomo 
+movie: ifilimu, ilifilimu 
+movie theatre: ibhayisikobho, ilibhayisikobho 
+muscle: umsipha 
+must: ukufanele 
+mustard: umasitadi 
+my: -mi 
+name: igama, iligama 
+narrate: ukutshela 
+nasty: -bi, -bolile 
+nation: isizwe 
+nationality: umhlobo 
+near: eduze 
+nearby: eduze 
+near to: eduze 
+neck: intamo 
+need: ukudinga 
+neighbour: umakhelwane 
+nevertheless: nokho | 2. nokho 
+never mind: akunandaba 
+new: -sha 
+newspaper: iliphephandaba, inuyziphepha, iphephandaba | 2. inyuziphepha 
+next: -landelayo 
+next to: eduze 
+nice: -hle | 2. -mnandi 
+night: ubusuku 
+nine: isishiyagalolunye 
+note: ilithikithi, ithikithi 
+nothing: lutho 
+nourishment: ukudla 
+novel: -sha 
+now: manje 
+nowadays: okwamanje 
+number: inombolo 
+numeral: inombolo 
+nurse: ilisistela, isistela, unesi 
+occur: ukuenzeka 
+occurence: ilithuba, ithuba 
+offer: ukuazisa, ukuethula | 2. ukuazisa, ukuethula | 3. ukuazisa, ukuethula | 4. ukuphakamisa 
+office: ihhovisi, ilihhovisi | 2. ihhovisi, ilihhovisi 
+offspring: ingane 
+often: kaningi 
+oil: uowoyela 
+okay: -hle | 2. kahle | 3. kulungile 
+old: -dala | 2. -dala 
+old man: ikhehla, ilikhehla 
+omnibus: ibhasi, ilibhasi 
+on: phezu kwa- 
+one: -nye 
+onion: uanyanisi 
+only: kuphela | 2. -dwa 
+operative: isisebenzi 
+opportunity: ilithuba, ithuba 
+or: noma 
+orange: iliwolintshi, iwolintshi 
+other: -nye 
+ought to: ukufanele 
+out: phandle 
+outside: phandle 
+overtake: ukuedlula 
+over there: lapho 
+o'clock: ihora 
+packet: iliphakethe, iphakethe, iliphasela, iphasela 
+pants: ibhulukwe, ilibhulukwe 
+papaw: uphopho 
+papaya: uphopho 
+paper: iliphepha, iphepha 
+parcel: iliphakethe, iphakethe, iliphasela, iphasela 
+pardon: ukuxolela 
+parent: umzali 
+park: ukupaka 
+passport: ilipasipoti, ipasipoti 
+pass by: ukuedlula 
+pastor: umfundisi 
+pate: ikhanda, ilikhanda 
+paw: umlenze 
+pay: ukukhokha 
+pea: uphizi 
+peach: ilipentshisi, ipentshisi 
+peanut: ilintogomane, intogomane 
+pencil: ilipensele, ipensele 
+pepper: upelepele 
+perchance: ngabe 
+perform: ukungena | 2. ukuenza | 3. ukuazisa, ukuethula 
+perhaps: ngabe 
+peril: inngozi 
+periodical: iliphephandaba, inuyziphepha, iphephandaba 
+person: umuntu 
+petrol: uphetroli 
+pharmaceutical: umuthi 
+physician: udokotela 
+pick out: ukukhetha 
+pick up: ukuthatha 
+piece: isiqhephu 
+pig: ingulube 
+pill: iliphilisi, iphilisi 
+pineapple: uphayinaphu 
+place: indawo | 2. indawo 
+plan: injongo 
+plane: indiza 
+plate: ilipuleti, ipuleti, isitsha 
+platter: ilipuleti, ipuleti, isitsha 
+play: ukudlala | 2. ukudlala | 3. ukudlala 
+plum: ilipulamu, ipulamu 
+point out: ukukhombisa 
+police-station: ilipolisiteshi, ipolisiteshi 
+police: iphoyisa 
+policeman: iliphoyisa, iphoyisa 
+poor: -bi, -bolile | 2. -mpofu | 3. -mpofu 
+portal: ilisango, isango 
+possibly: ngabe 
+post: ukuposa | 2. iliposi, iposi 
+postage stamp: isitembu 
+postcard: iliposikhadi, iposikhadi 
+post office: iliposihhovisi, iposihhovisi 
+potato: ilizambane, izambane 
+pour: ukuthela 
+pray: ukuthandaza 
+premium: umklomelo 
+present: isipho | 2. ukuazisa, ukuethula | 3. ukuazisa, ukuethula | 4. ukuazisa, ukuethula 
+present with: ukuazisa, ukuethula 
+preserve: ukugcina 
+pretty: -hle 
+previously: phambili 
+price: intengo 
+pricey: -bizayo 
+privilege: ililungelo, ilungelo 
+prize: umklomelo 
+problem: inkinga 
+property: ilipulazi, ipulazi 
+pudding: uphuthini 
+purchase: ukuthenga | 2. ukuthenga | 3. ukuthenga | 4. ukuthenga 
+pure: -hlanzekileyo 
+put off: ukukhumula 
+put on the stage: ukuazisa, ukuethula 
+put up with: ukuhlupheka 
+question: umbuzo 
+quickly: ngokushesha 
+radio: ilirediyo, irediyo, umsakazo 
+railroad: ujantsi wesitimela 
+railway: ujantsi wesitimela 
+ranch: ilipulazi, ipulazi 
+rand: ilirandi, irandi 
+rather: kancane 
+ray: ilirediyo, irediyo, umsakazo 
+read: ukufunda 
+reality: iliqiniso, iqiniso 
+realize: ukuqonda 
+rebate: isephulelo 
+recall: ukukhumbula 
+receipt: ilirisidi, irisidi 
+receive: ukuamukela 
+recollect: ukukhumbula 
+recommend: ukuphakamisa 
+record: ukurejista 
+recover: ukuphola 
+red: -bomvu | 2. -bomvu 
+refrigerator: ifriji, ilifriji 
+refuse: ukuala 
+regard: ukubukela | 2. ukubukela 
+register: ukurejista | 2. ukuphakamisa 
+regularly: kaningi 
+reject: ukuala 
+relate: ukutshela 
+relative: isihlobo 
+remain: ukuhlala, ukusala 
+remedy: ukupholisa 
+remember: ukukhumbula 
+remote: -de 
+repeat: ukuphinda 
+reply: ukuphendula 
+report: ukubika 
+repose: ukuphumula 
+require: ukudinga 
+reserve: ukubhalisa 
+respect: ukuhlonipha 
+respond: ukuphendula 
+rest: ukuphumula 
+restaurant: ilirestouranti, irestouranti 
+return: ukubuya | 2. ukubuya 
+rice: ilayisi 
+right: -lungileyo | 2. -phakeme | 3. ililungelo, ilungelo 
+righthand: -lungileyo 
+rim: ilirandi, irandi 
+rise: ukusukuma | 2. ukusukuma 
+river: umfula 
+road: indlela, umgwaqo 
+robber: izigebengu 
+robe: ililokwe, ilokwe 
+room: indawo, ikamelo, ilikamelo 
+rope: intambo 
+route: indlela, umgwaqo 
+sack: isaka, isikhwama 
+salad: ilisaladi, isaladi 
+salt: usawoti 
+sandwich: ilisendiwishi, isendiwishi 
+sausage: isositshi 
+say: ukuthi 
+say goodbye: ukuvalelisa 
+say goodbye to: ukuvalelisa 
+scatter: ukuthela 
+school: isikolo 
+sea: ulwandle 
+see: ukuhlangana | 2. ukubona | 3. ukuvakashela 
+sell: ukuthengisa 
+send: ukuthumela 
+sentence: umusho 
+sergeant: ilisayini, isayini 
+serious: -phakeme 
+seven: isikhombisa 
+seventeen: ishumi nesikhombisa 
+shape: ifomu, ilifomu 
+shed: ukuthela 
+shelf: ilishalofu, ishalofu 
+shine: ukukhanya 
+ship: isikebhe 
+shirt: ihembe, ilihembe 
+shoe: isicathulo 
+shop: isitolo 
+should: ukufanele 
+show: ukukhombisa 
+shut off: ukuvala 
+sick: -gulayo 
+sign: ukusayina 
+signature: isayini 
+since: ngoba 
+sing: ukuhlabelela 
+sir: ubaba 
+sister: udade, usisi 
+sit: ukuhlala 
+six: -isithupha 
+sixteen: ishumi nesithupha 
+size: usayizi 
+skirt: ingubo 
+sky: ilizulu, izulu 
+slay: ukubulala 
+slice: ukusika 
+slow: -ephuzayo | 2. -ephuzayo 
+small: -ncane 
+smoke: inthuthu 
+snack: ilantshi, ililantshi, indlamini 
+so: kanjalo | 2. kanjalo | 3. kanjalo 
+sole: -dwa 
+solicitor: ummeli 
+solitary: -dwa 
+something: into, noma yini 
+son: indodana 
+soon: masinya 
+sort: umhlobo 
+soup: isobho 
+speak: ukukhuluma 
+spear: umkhonto 
+spectacles: izibuko 
+spinster: inkosazana 
+spoon: isipunu 
+spot: indawo 
+spring: entwasahlobo 
+springtime: entwasahlobo 
+stamp: isitembu 
+stand: ukusukuma | 2. ukuma | 3. ukusukuma 
+stand up: ukusukuma | 2. ukusukuma 
+start: ukuqala 
+station: isiteshi 
+stay: ukuhlala, ukusala 
+stay over: ukuhlala, ukusala 
+steal: ukueba 
+stomach: isisu 
+stop: ukuvala 
+store: isitolo 
+storm: isiphepho 
+street: isitaladi 
+strength: amandla 
+strike: ukungqongqoza 
+string: intambo 
+student: isitshudeni 
+study: ukufunda 
+such: kanjalo 
+such a: kanjani 
+such as: kanjani 
+suffer: ukuhlupheka 
+suffice: ukuanele 
+sugar: ushukela 
+suggest: ukuphakamisa 
+summer: ihlobo 
+summon: ukubiza 
+sun: ilanga, ililanga 
+supermarket: ilisupamakethe, isupamakethe | 2. ilisupamakethe, isupamakethe 
+supervise: ukuhlola 
+supply: ukudiliva 
+supporter: lilunga, ilunga 
+sweep: ukushanela 
+swiftly: ngokushesha 
+swim: ukubhukuda 
+swine: ingulube 
+switch off: ukuvala 
+table: ilitafula, itafula 
+take: ukuamukela | 2. ukuthatha 
+take in: ukuamukela 
+take leave: ukuvalelisa 
+take leave from: ukuvalelisa 
+take off: ukukhumula 
+take over: ukuthenga 
+talk: ukukhuluma 
+tank: ilitanki, itanki | 2. ilitanki, itanki 
+tardy: -phuzileyo 
+tasty: -mnandi 
+taxi: ilithekisi, ithekisi 
+tea: ilitiye, itiye 
+teach: ukufundisa | 2. ukufundisa 
+teacher: uthisha 
+telegram: ilitelegilamu, itelegilamu 
+telephone: ucingo, ulucingo, uthelefoni 
+television set: umabonwakude 
+tell: ukuthi | 2. ukutshela 
+temperature: ithemperetsha 
+ten: ishumi 
+tender: ukuazisa, ukuethula | 2. ukuphakamisa 
+tent: itende 
+terminate: ukuqeda 
+test: ukuzama 
+thanks: ngiyabonga, siyakubonga 
+thank you: ngiyabonga, siyakubonga 
+that: -ni | 2. -phi, ubani | 3. kanjalo 
+that's all right: akunandaba 
+that's okay: akunandaba | 2. akunandaba 
+that way: kanjalo 
+there: lapho | 2. lapho 
+there are: kukhona 
+there is: kukhona 
+these days: okwamanje 
+the day before yesterday: kuthangi 
+thief: izigebengu 
+thing: into 
+thirteen: ishumi nantathu 
+thirty: amashumi amathathu 
+thou: wena | 2. wena | 3. wena 
+three: -thathu 
+throat: umphimbo 
+thus: kanjalo | 2. kanjalo 
+ticket: ilithikithi, ithikithi 
+time: ihora | 2. isikhathi 
+tin: ilithini, ithini 
+tip: umbhanselo 
+tobacco: ugwayi 
+today: namhlanje 
+toilet: ilithoyilethe, ithoyilethe 
+tomato: utamatisi 
+tomorrow: kusasa 
+tongue: ulimi | 2. ulimi, ululimi 
+too: futhi 
+tooth: ilizinyo, izinyo 
+tortoise: ufudu, ulufudu 
+town: idolobha, ilidolobha 
+tradition: ilisiko, isiko 
+train: isitimela | 2. isitimela 
+transmit: ukuthumela 
+travel: ukuhamba 
+treatment: impatho 
+trouble: inkinga 
+trousers: ibhulukwe, ilibhulukwe 
+trust: ukuethemba | 2. ukuethemba 
+truth: iliqiniso, iqiniso 
+try: ukuzama 
+turkey: ikalkuni 
+turn off: ukuvala 
+twelve: -yishumi nambili 
+twenty: amashumi amabili 
+twice: kabili 
+two: -bili 
+ultimately: ekugcineni 
+uncle: umalume 
+under: phansi kwa- 
+underneath: phansi | 2. phansi kwa- | 3. phansi 
+understand: ukuqonda 
+unfortunately: ngeshwa 
+university: iliyunivesithi, iyunivesithi 
+unmarried woman: inkosazana 
+upon: phezu kwa- 
+us: thina 
+use: ukusebenzisa 
+valuable: -bizayo 
+vegetable: uhlaza 
+vend: ukuthengisa 
+verify: ukuhlola 
+vessel: isikebhe 
+view: ukubukela 
+vigour: amandla 
+village: umuzi 
+visit: ukuvakashela 
+vote: ukuvota 
+wait: ukulinda 
+waiter: uweta 
+wait for: ukulinda 
+wake: ukuvuka 
+wake up: ukuvuka 
+walk: ukuhamba 
+want: ukufuna 
+warrant: igaranti, iligaranti 
+wash: ukugeza | 2. ukugeza 
+watch: iwashi | 2. iliwashi, iwashi | 3. ukubukela 
+water: amanzi 
+way: ilisiko, isiko | 2. indlela, umgwaqo 
+we: thina 
+weather: ilizulu, izulu 
+week: iliviki, iviki 
+well: kahle 
+wench: intombazane, intombi 
+what: -ni | 2. -ni 
+what a: kanjani 
+what for: yini ndaba | 2. yini ndaba 
+what kind of: inhloboni | 2. inhloboni 
+what sort of: inhloboni | 2. inhloboni 
+wheel: ilisondo, isondo 
+wheelbarrow: ibhala, ilibhala 
+when: nini | 2. nini | 3. nini | 4. nini 
+where: -phi, kuphi | 2. -phi, kuphi 
+wherefore: yini ndaba 
+which: -phi, ubani | 2. -phi, ubani 
+while: isikhathi 
+whiskey: uwiski 
+whisky: uwiski 
+white: -mhlophe | 2. -mhlophe 
+white man: umlungu 
+who: -phi, ubani 
+why: yini ndaba | 2. yini ndaba | 3. yini ndaba 
+wife: inkosikazi, umfazi 
+win: ukuhola, ukuwina 
+wind: umoya 
+window: ifasitela, ilifastela 
+winter: ubusika 
+wireless: ilirediyo, irediyo, umsakazo 
+wish: ukufisa | 2. ukufuna 
+woman: umfazi 
+wonderful: -mangalisayo 
+word: igama 
+work: ukusebenza | 2. umsebenzi 
+worker: isisebenzi 
+working man: isisebenzi 
+workman: isisebenzi 
+wrench: isikhiye, ukhiye 
+wrist-watch: iwashi 
+write: ukubhala 
+yard: iyaladi, iliyaladi | 2. iyaladi, iliyaladi 
+ye: wena | 2. wena 
+year: umnyaka, unyaka 
+yes: yebo 
+yesterday: izolo 
+yet: nokho 
+yon: lapho 
+yonder: lapho 
+you: wena | 2. wena | 3. wena | 4. wena 
+young: ingane | 2. -sha 
+youngster: insizwa 
+your: -kho 
+youth: insizwa 
+you're welcome: akunandaba 
+zoo: ilizu, izu 

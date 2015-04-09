@@ -94,13 +94,13 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
-            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
-                Alarm.alarm();
-                terminal.setTextColor(Alarm.colorChange());
-            } else if (alarm != null) {
-                terminal.moveTo(numRows, 0);
-                terminal.write("\u23F0" + "  " + alarm);
-            }
+//            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
+//                Alarm.alarm();
+//                terminal.setTextColor(Alarm.colorChange());
+//            } else if (alarm != null) {
+//                terminal.moveTo(numRows, 0);
+//                terminal.write("\u23F0" + "  " + alarm);
+//            }
 
             // print Clock
             terminal.setTextColor(AnsiTerminal.Color.CYAN);

@@ -12,6 +12,7 @@ import java.util.Iterator;
 /**
  * Created by charlynbuchanan on 4/8/15.
  * This class grabs headlines from google news that the Main class will then print to terminal
+ * as a scrolling newsfeed
  */
 public class NewsGrabber
 {

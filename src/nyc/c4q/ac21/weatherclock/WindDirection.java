@@ -27,58 +27,58 @@ public class WindDirection
 
             if((windDeg >= 348.75) && (windDeg <= 360))
             {
-                windDirection += "North";
+                windDirection += "↑North↑";
                 //return windDirection;
             }
             if((windDeg >= 0) && (windDeg <= 11.25))
             {
-                windDirection += "North";
+                windDirection += "↑North↑";
                 //return windDirection;
             }
             else if((windDeg > 11.25) && (windDeg < 33.75)) {
-                windDirection += "NNE";
+                windDirection += "↗NNE↗";
             }
             else if((windDeg >= 33.75) && (windDeg < 56.25)) {
-                windDirection += "NE";
+                windDirection += "↗NE↗";
             }
             else if ((windDeg >= 56.25) && (windDeg < 78.75)) {
                 windDirection += "↗ENE↗";
             }
             else if((windDeg >= 78.75) && (windDeg < 101.25)) {
-                windDirection += "E";
+                windDirection += "➣E➣";
             }
             else if ((windDeg >= 101.25) && (windDeg < 123.75)) {
                 windDirection += "ESE";
             }
             else if ((windDeg >= 123.75) && (windDeg < 146.25)) {
-                windDirection += "SE";
+                windDirection += "↘SE↘";
             }
             else if ((windDeg >= 146.25) && (windDeg < 168.75)) {
-                windDirection += "SSE";
+                windDirection += "↘SSE↘";
             }
             else if ((windDeg >= 168.75) && (windDeg < 191.25)) {
-                windDirection += "S";
+                windDirection += "↓S↓";
             }
             else if((windDeg >= 191.25) && (windDeg < 213.75)) {
-                windDirection += "SSW";
+                windDirection += "↙SSW↙";
             }
             else if ((windDeg >= 213.75) && (windDeg < 236.25)) {
-                windDirection += "SW";
+                windDirection += "↙SW↙";
             }
             else if ((windDeg >= 236.25) && (windDeg < 258.75)) {
-                windDirection += "WSW";
+                windDirection += "↙WSW↙";
             }
             else if ((windDeg >= 258.75) && (windDeg < 251.25)) {
-                windDirection += "W";
+                windDirection += "←W←";
             }
             else if ((windDeg >=281.25) && (windDeg < 303.75)){
-                windDirection += "WNW";
+                windDirection += "↖WNW↖";
             }
             else if ((windDeg >= 303.75) && (windDeg < 326.25)) {
-                windDirection += "NW";
+                windDirection += "↖NW↖";
             }
             else if ((windDeg >= 326.25) && (windDeg < 348.75)) {
-                windDirection += "NNW";
+                windDirection += "↖NNW↖";
             }
             //System.out.println("Wind direction: " + windDirection);
             return windDirection;
