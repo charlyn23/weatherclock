@@ -36,8 +36,7 @@ public class Holidays {
         return holidays;
     }
     
-    public static void printHolidays(String date, Hashmap<Calendar, String> holidays){
-        Calendar cal = DateTime.parseDate(date);
+    public static void printHolidays(Hashmap<Calendar, String> holidays, Calendar cal){
         int yPosition = numCols / 2 - 11;
         String holiday;
         
