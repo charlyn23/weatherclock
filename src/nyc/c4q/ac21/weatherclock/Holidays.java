@@ -35,5 +35,19 @@ public class Holidays {
         }
         return holidays;
     }
-
+    
+    public static void printHolidays(String date, Hashmap<Calendar, String> holidays){
+        Calendar cal = DateTime.parseDate(date);
+        String holiday;
+        
+        if(holidays.containsKey(cal)) {
+            holiday = "National Holiday:  " + holidays.get(date);
+        }
+        else {
+            holiday = "";
+        }
+        
+        terminal.setTextColor(AnsiTerminal.Color.BLUE);
+        terminal.moveTo(, yPostion - 4);
+    }
 }
