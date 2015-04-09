@@ -14,4 +14,81 @@ public class Ascii {
 
         return ny;
     }
+    
+    public static ArrayList<String> sun(){
+        ArrayList<String> sunshine = new ArrayList<String>();
+        sunshine.add("     \\  | //    ");
+        sunshine.add("      . --- .    ");
+        sunshine.add("    -==|   |==-  ");
+        sunshine.add("      . --- .    ");
+        sunshine.add("     //   |  \\  ");
+
+        return sunshine;
+    }
+
+    public static ArrayList<String> cloud(){
+        ArrayList<String> cloud = new ArrayList<String>();
+        cloud.add("             __ ___        ");
+        cloud.add("        . (            ) ).     ");
+        cloud.add("      (     --    ( --    ) ) ");
+        cloud.add(" (__________ )   ");
+
+        return cloud;
+
+    }
+
+    public static ArrayList<String> rain(){
+        ArrayList<String> rain = new ArrayList<String>();
+        rain.add("  ______       ");
+        rain.add("(     )       )    ");
+        rain.add("(__;__ ;__))  ");
+        rain.add("  '   '    '    '    ");
+        rain.add("     '    '    '   ");
+
+        return rain;
+    }
+
+    public static ArrayList<String> moon(){
+        ArrayList<String> luna = new ArrayList<String>();
+        luna.add("        ooooo   ");
+        luna.add("  ooo              ");
+        luna.add("ooo               ");
+        luna.add(" oooo              ");
+        luna.add("       ooooo    ");
+
+        return luna;
+    }
+
+    public static ArrayList<String> snow(){
+        ArrayList<String> snow = new ArrayList<String>();
+        snow.add("  ______          ");
+        snow.add("(     )       )         ");
+        snow.add("(__*__ *__))  ");
+        snow.add("  *    *   *   *    ");
+        snow.add("      *   *    *     ");
+
+        return snow;
+    }
+
+    public static ArrayList<String> extreme(){
+        ArrayList<String> face = new ArrayList<String>();
+        face.add("     88888888       ");
+        face.add(" 88   |]    |]    88  ");
+        face.add("88        __       88  ");
+        face.add(" 88     (___)    88  ");
+        face.add("     88888888        ");
+
+        return face;
+    }
+
+    public static ArrayList<String> thunder(){
+        ArrayList<String> lightning = new ArrayList<String>();
+        lightning.add("          ____  ");
+        lightning.add("        /       /  ");
+        lightning.add("    _/      ./    ");
+        lightning.add("  /     ./         ");
+        lightning.add("/,/                ");
+
+        return lightning;
+    }
 }
