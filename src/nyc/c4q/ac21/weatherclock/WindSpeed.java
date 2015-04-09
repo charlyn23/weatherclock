@@ -17,7 +17,7 @@ public class WindSpeed {
         JSONObject obj = (JSONObject) JSONValue.parse(doc);
         JSONObject windStuff = (JSONObject) obj.get("wind");
         Double windSpeed = (Double) windStuff.get("speed");
-        
+
         return windSpeed;
     }
 

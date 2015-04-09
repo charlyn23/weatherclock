@@ -123,17 +123,6 @@ public class Main {
                 terminal.write(Ascii.printCity().get(i));
             }
 
-            // print sun
-            terminal.setTextColor(AnsiTerminal.Color.YELLOW);
-            for (int i = 0; i < Ascii.day1().size(); i++) {
-                if (i%2==0) {
-                    terminal.moveTo(2 + i, 0);
-                    terminal.write(Ascii.day1().get(i));
-                } else {
-                    terminal.moveTo(2 + i, 0);
-                    terminal.write(Ascii.day2().get(i));
-                }
-            }
 
             // print calendar
             int xCalendar = numRows - 5;
