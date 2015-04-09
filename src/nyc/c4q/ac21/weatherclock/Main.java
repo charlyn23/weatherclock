@@ -21,7 +21,22 @@ public class Main {
         // Set Alarm
         Scanner input = new Scanner(System.in);
         System.out.println("Set your alarm time (ie 7:00am): ");
-        String alarm = input.next(), ap;
+        String ap, alarm = input.next();
+        String[] time = new String[2];
+        boolean am = true;
+
+        if (alarm.matches("[0-2]?\\d:[0-5]\\d[a|A|p|P][m|M]")) {
+            time = alarm.split(":");
+            ap = time[1].substring(2);
+            time[1] = time[1].substring(0, 2);
+
+            if (ap.equalsIgnoreCase("am"))
+                am = true;
+            else if (ap.equalsIgnoreCase("pm"))
+                am = false;
+        } else {
+            alarm = null;
+        }
 
         // When the program shuts down, reset the terminal to its original state.
         // This code makes sure the terminal is reset even if you kill your
@@ -79,7 +94,9 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
-            Alarm.setAlarm(cal, alarm, hour, min, sec);
+            if (alarm != null) {
+                Alarm.setAlarm(cal, am, time, hour, min, sec);
+            }
 
             // print Clock
             Clock.printHour(hour, hour1, hour2);
@@ -102,7 +119,7 @@ public class Main {
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
             terminal.setTextColor(AnsiTerminal.Color.MAGENTA);
             for (int i = 0; i < Ascii.printCity().size(); i++) {
-                terminal.moveTo(10 + i, 0);
+                terminal.moveTo(11 + i, 0);
                 terminal.write(Ascii.printCity().get(i));
             }
 

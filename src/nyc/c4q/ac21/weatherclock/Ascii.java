@@ -14,26 +14,4 @@ public class Ascii {
 
         return ny;
     }
-
-    public static ArrayList<String> day1() {
-        ArrayList<String> sun = new ArrayList<String>();
-        sun.add("        \\ | /");
-        sun.add("       -.~-~.-");
-        sun.add("     -==;   ;==-");
-        sun.add("       -'~-~'- .') ");
-        sun.add("        / | \\ (_  )");
-
-        return sun;
-    }
-
-    public static ArrayList<String> day2() {
-        ArrayList<String> sun = new ArrayList<String>();
-        sun.add("        \\ | /");
-        sun.add("      '-.~-~.-'");
-        sun.add("     -==;   ;==-");
-        sun.add("      .-'~-~'-. .') ");
-        sun.add("        / | \\    (_  )");
-
-        return sun;
-    }
 }
