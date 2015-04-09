@@ -38,6 +38,7 @@ public class Holidays {
     
     public static void printHolidays(String date, Hashmap<Calendar, String> holidays){
         Calendar cal = DateTime.parseDate(date);
+        int yPosition = numCols / 2 - 11;
         String holiday;
         
         if(holidays.containsKey(cal)) {
@@ -48,6 +49,6 @@ public class Holidays {
         }
         
         terminal.setTextColor(AnsiTerminal.Color.BLUE);
-        terminal.moveTo(, yPostion - 4);
+        terminal.moveTo(14, yPostion);
     }
 }
