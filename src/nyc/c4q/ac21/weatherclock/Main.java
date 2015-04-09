@@ -75,6 +75,13 @@ public class Main {
         }
         //Get Current Weather ID
         long currentWeather = TPH.getID();
+        //Get word of day
+        Random random = new Random;
+        File zulu = new File(
+                "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
+        ArrayList<String> words = getWordArray(zulu);
+        int wordIndex = random.nextInt();
+        String wordOfDay = words.get(wordIndex);
 
         // Print digital clock
         int yPosition = 1 + numCols / 2 - 5;
@@ -194,6 +201,12 @@ public class Main {
             //Print weather condition ASCII
             terminal.setTextColor(AnsiTerminal.Color.WHITE);
             Weather.printWeather(currentWeather);
+            
+            //Print word of day
+            terminal.moveTo(numRows - 4, numCols - 25);
+            terminal.write("Zulu word of the day:");
+            terminal.moveTo(numRows - 3, numCols - 25);
+            terminal.write(wordOfDay);
 
             // Pause for one second, and do it again.
             terminal.reset();
