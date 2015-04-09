@@ -42,62 +42,63 @@ public class Weather {
 //    }
 
     public static void printWeather(long id){
-        int xPosition = 10;
+        int xPosition = 15;
+        int yPosition = numCols - 30;
         if(id >= 200 && id <= 232) {  // thunderstorm
             for (int i = 0; i < Ascii.thunder().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.thunder().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
 
         } else if (id >= 300 && id <= 531){
             //print rain ascii
             for (int i = 0; i < Ascii.rain().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.rain().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         } else if (id >= 600 && id <= 622){
             //print snow ascii
             for (int i = 0; i < Ascii.snow().size(); i++) {
-                terminal.moveTo(11 + i, numCols - 10);
+                terminal.moveTo(xPosition + i,yPosition);
                 terminal.write(Ascii.snow().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         } else if (id >= 701 && id <= 781){
             //print atmosphere
             for (int i = 0; i < Ascii.extreme().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.extreme().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         } else if (id == 800){
             //print sun
             for (int i = 0; i < Ascii.sun().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.sun().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         } else if (id > 800 && id <= 804){  //cloud
             //print cloud ascii
             for (int i = 0; i < Ascii.cloud().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.cloud().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         } else if (id >= 900 && id <= 906){
             //print extreme face ascii
             for (int i = 0; i < Ascii.extreme().size(); i++) {
-                terminal.moveTo(11 + i, numCols - 10);
+                terminal.moveTo(xPosition + i, yPosition);
                 terminal.write(Ascii.extreme().get(i));
             }
-            terminal.moveTo(16,numCols- 10);
+            terminal.moveTo(xPosition + 5,yPosition-4);
             terminal.write(weatherInfo());
         }
     }

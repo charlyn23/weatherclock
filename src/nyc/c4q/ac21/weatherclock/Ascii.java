@@ -28,9 +28,9 @@ public class Ascii {
 
     public static ArrayList<String> cloud(){
         ArrayList<String> cloud = new ArrayList<String>();
-        cloud.add("             __ ___        ");
-        cloud.add("        . (            ) ).     ");
-        cloud.add("      (     --    ( --    ) ) ");
+        cloud.add("       __ ___        ");
+        cloud.add("   . (          ) ).     ");
+        cloud.add("  (     --    ( --    ) ) ");
         cloud.add(" (__________ )   ");
 
         return cloud;

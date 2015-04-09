@@ -4,6 +4,7 @@ package nyc.c4q.ac21.weatherclock;
 */
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -14,13 +15,13 @@ import java.util.Random;
 
 public class ZuluGrabber
 {
-    public static void main(String[] args)
-    {
-        File zulu = new File(
-                "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
-        getALine(zulu);
-
-    }
+//    public static void main(String[] args)
+//    {
+//        File zulu = new File(
+//                "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
+//        getALine(zulu);
+//
+//    }
 
 
 
@@ -39,9 +40,9 @@ public class ZuluGrabber
 //        }
 //    }
 
-    public static ArrayList<String> getWordArray(String filename) {
+    public static ArrayList<String> getWordArray(File filename) throws FileNotFoundException {
         ArrayList<String> words = new ArrayList<String>();
-        Scanner reader = new Scanner(file);
+        Scanner reader = new Scanner(filename);
         
         while (reader.hasNextLine()) {
           words.add(reader.nextLine());
@@ -67,18 +68,14 @@ public class ZuluGrabber
         catch(FileNotFoundException e) {
             e.printStackTrace();
         }
-// Object randomItem = list.get(new Random().nextInt(list.size())
+//// Object randomItem = list.get(new Random().nextInt(list.size())
+//    }
+//    public String word() {
+//        Random randomGenerator = new Random();
+//    int index = randomGenerator.next.size();
+//    Item randomItem = .get(index);
+//    System.out.println("Managers choice this week" + randomItem.toString() + "our recommendation to you");
+//    return randomItem;
     }
-    public String word() {
-        Random randomGenerator = new Random();
-    int index = randomGenerator.next.size();
-    Item randomItem = .get(index);
-    System.out.println("Managers choice this week" + randomItem.toString() + "our recommendation to you");
-    return randomItem;
 }
 
-
-
-
-}
-}

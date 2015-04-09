@@ -3,10 +3,14 @@ package nyc.c4q.ac21.weatherclock;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -19,23 +23,6 @@ public class Main {
         final int numRows = TerminalSize.getNumLines();
         final AnsiTerminal terminal = new AnsiTerminal();
         DecimalFormat df = new DecimalFormat("#");
-
-        // When the program shuts down, reset the terminal to its original state.
-        // This code makes sure the terminal is reset even if you kill your
-        // program by pressing Control-C.
-        Runtime.getRuntime().addShutdownHook(new Thread()
-        {
-            public void run()
-            {
-                terminal.showCursor();
-                terminal.reset();
-                terminal.scroll(1);
-                terminal.moveTo(numRows, 0);
-            }
-        });
-        terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
-        terminal.clear();
-        terminal.hideCursor();
         
          // User input set alarm
         Scanner input = new Scanner(System.in);
@@ -57,6 +44,23 @@ public class Main {
             alarm = null;
         }
 
+        // When the program shuts down, reset the terminal to its original state.
+        // This code makes sure the terminal is reset even if you kill your
+        // program by pressing Control-C.
+        Runtime.getRuntime().addShutdownHook(new Thread()
+        {
+            public void run()
+            {
+                terminal.showCursor();
+                terminal.reset();
+                terminal.scroll(1);
+                terminal.moveTo(numRows, 0);
+            }
+        });
+        terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
+        terminal.clear();
+        terminal.hideCursor();
+
         // Get sunset time for the current day.
         Calendar sunset = Sunset.getSunset();
         Calendar sunrise = Sunrise.getSunrise();
@@ -76,17 +80,21 @@ public class Main {
         //Get Current Weather ID
         long currentWeather = TPH.getID();
         //Get word of day
-        Random random = new Random;
+        Random random = new Random();
+        String wordOfDay = "";
         File zulu = new File(
                 "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
-        ArrayList<String> words = getWordArray(zulu);
-        int wordIndex = random.nextInt();
-        String wordOfDay = words.get(wordIndex);
+        try {
+            ArrayList<String> words = ZuluGrabber.getWordArray(zulu);
+            int wordIndex = random.nextInt();
+            wordOfDay = words.get(wordIndex);
+        }
+        catch (FileNotFoundException e) {
+        }
 
         // Print digital clock
         int yPosition = 1 + numCols / 2 - 5;
         int yClock = numCols/2;
-        int xPosition = numCols;
         int newsOffset = 0;
         while (true) {
             // Get the current date and time.
