@@ -1,5 +1,6 @@
 package nyc.c4q.ac21.weatherclock;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
@@ -55,4 +56,23 @@ public class TPH {
             return null;
         return humid;
     }
+
+    public static Long getID() {
+        URL url = HTTP.stringToURL("http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY");
+        String doc = HTTP.get(url);
+        JSONObject obj = (JSONObject) JSONValue.parse(doc);
+        JSONArray weather = (JSONArray) obj.get("weather");
+        JSONObject weatherStuff = (JSONObject) weather.get(0);
+        Long id = (Long) weatherStuff.get("id");
+       return id;
+
+    }
+
+
+
+//    public static void main (String [] args) {
+//       getTemp();
+//        System.out.println(getID());
+//
+//    }
 }

@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -17,6 +18,7 @@ public class Main {
         final int numCols = TerminalSize.getNumColumns();
         final int numRows = TerminalSize.getNumLines();
         final AnsiTerminal terminal = new AnsiTerminal();
+        DecimalFormat df = new DecimalFormat("#");
 
         // Set Alarm
         Scanner input = new Scanner(System.in);
@@ -65,12 +67,18 @@ public class Main {
         //Get wind speed and direction
         Double windSpeed = WindSpeed.getWindSpeed();
         String windDirection = WindDirection.getWindDirection();
+        //Get temp and pressure and humidity
+        double temp = TPH.getTemp().intValue();
+        double presh = TPH.getPressure().intValue();
+        double humidity = TPH.getHumid();
         //Get headlines
        ArrayList<String> newsfeed =  NewsGrabber.getHeadlines();
         String news = "";
         for (int i = 0; i < newsfeed.size(); i++) {
             news += ".   " + newsfeed.get(i);
         }
+        //Get Current Weather ID
+        String currentWeather = Weather.printWeather(TPH.getID());
 
         //int xPosition = 1 + numCols / 2 - 5;
         int xPosition = numCols;
@@ -124,7 +132,7 @@ public class Main {
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
             terminal.setTextColor(AnsiTerminal.Color.MAGENTA);
             for (int i = 0; i < Ascii.printCity().size(); i++) {
-                terminal.moveTo(15 + i, 4);
+                terminal.moveTo(14 + i, 4);
                 terminal.write(Ascii.printCity().get(i));
             }
 
@@ -132,30 +140,40 @@ public class Main {
             String sunriseEmoji = new String(new int[] { 0x1F305 }, 0, 1);
             String sunriseTime = DateTime.formatTime(sunrise, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(19, 20);
+            terminal.moveTo(17, 20);
             terminal.write(sunriseEmoji + "  sunrise at " + sunriseTime);
 
             // Write sunset time in dark yellow.
             String sunsetEmoji = new String (new int[] {0x1F307}, 0, 1);
             String sunsetTime = DateTime.formatTime(sunset, false);
             terminal.setTextColor(AnsiTerminal.Color.YELLOW, false);
-            terminal.moveTo(20, 20);
+            terminal.moveTo(18, 20);
             terminal.write(sunsetEmoji + "  sunset at " + sunsetTime);
+
+
+            // Temperature, Pressure, Humidity
+            terminal.setTextColor(AnsiTerminal.Color.RED, false);
+            terminal.moveTo(19, 20);
+            terminal.write("Temperature : " + df.format(temp) + " F");
+            terminal.moveTo(20, 20);
+            terminal.write("Pressure : " + df.format(presh) + " inHg");
+            terminal.moveTo(21, 22);
+            terminal.write("Humidity : " + humidity + "%");
 
             //Write wind direction
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(21, 18);
+            terminal.moveTo(22, 18);
             terminal.write("Wind direction : " + windDirection);
 
             //Write wind speed
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(22, 22);
+            terminal.moveTo(23, 22);
             terminal.write("Wind speed: " + windSpeed);
 
             //Write DST
             String date = DateTime.formatDate(cal);
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
-            terminal.moveTo(23, 25);
+            terminal.moveTo(24, 25);
             terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
 
             //Write newsfeed
@@ -174,6 +192,10 @@ public class Main {
                 terminal.moveTo(xCalendar + i, 16);
                 terminal.write(CalendarPrinter.getCalendar(cal).get(i));
             }
+
+            //Print weather condition ASCII
+            terminal.setTextColor(AnsiTerminal.Color.WHITE);
+
 
             // Pause for one second, and do it again.
             terminal.reset();
