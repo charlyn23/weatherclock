@@ -45,26 +45,26 @@ public class WeatherParse {
 
         if(id >= 200 && id <= 232) {  // thunderstorm
             //print thunderstorm ascii
-            for (int i = 0; i < Ascii.thunderstorm().size(); i++) {
+            for (int i = 0; i < Ascii.thunder().size(); i++) {
                 terminal.moveTo(11 + i, numCols- 10);
-                terminal.write(Ascii.thunderstorm().get(i));
+                terminal.write(Ascii.thunder().get(i));
             }
             terminal.moveTo(16,numCols- 10);
             terminal.write(weatherInfo());
 
         } else if (id >= 300 && id <= 531){
             //print rain ascii
-            for (int i = 0; i < Ascii.raining().size(); i++) {
+            for (int i = 0; i < Ascii.rain().size(); i++) {
                 terminal.moveTo(11 + i, numCols- 10);
-                terminal.write(Ascii.raining().get(i));
+                terminal.write(Ascii.rain().get(i));
             }
             terminal.moveTo(16,numCols- 10);
             terminal.write(weatherInfo());
         } else if (id >= 600 && id <= 622){
             //print snow ascii
-            for (int i = 0; i < Ascii.snowy().size(); i++) {
+            for (int i = 0; i < Ascii.snow().size(); i++) {
                 terminal.moveTo(11 + i, numCols - 10);
-                terminal.write(Ascii.snowy().get(i));
+                terminal.write(Ascii.snow().get(i));
             }
             terminal.moveTo(16,numCols- 10);
             terminal.write(weatherInfo());
@@ -76,9 +76,17 @@ public class WeatherParse {
             }
             terminal.moveTo(16,numCols- 10);
             terminal.write(weatherInfo());
-        } else if (id >= 800 && id <= 804){  //cloud
+        } else if (id == 800){
+            //print sun
+            for (int i = 0; i < Ascii.sun().size(); i++) {
+                terminal.moveTo(11 + i, numCols- 10);
+                terminal.write(Ascii.sun().get(i);
+            }
+            terminal.moveTo(16,numCols- 10);
+            terminal.write(weatherInfo());
+        } else if (id > 800 && id <= 804){  //cloud
             //print cloud ascii
-            for (int i = 0; i < Ascii.cloudy().size(); i++) {
+            for (int i = 0; i < Ascii.cloud().size(); i++) {
                 terminal.moveTo(11 + i, numCols- 10);
                 terminal.write(Ascii.cloudy().get(i));
             }
@@ -92,18 +100,6 @@ public class WeatherParse {
             }
             terminal.moveTo(16,numCols- 10);
             terminal.write(weatherInfo());
-        } else if (id >= 300 && id <= 321){
-            //print null
-            for (int i = 0; i < Ascii.cloudy().size(); i++) {
-                terminal.moveTo(11 + i, numCols- 10);
-                terminal.write(null);
-            }
-
-            //print weather info()
-            terminal.moveTo(16,numCols- 10);
-            terminal.write(weatherInfo());
-            //print weather info(
-            //additional
-        }
+        } 
     }
 }
