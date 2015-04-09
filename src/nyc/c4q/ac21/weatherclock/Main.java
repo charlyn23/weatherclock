@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -17,6 +18,7 @@ public class Main {
         final int numCols = TerminalSize.getNumColumns();
         final int numRows = TerminalSize.getNumLines();
         final AnsiTerminal terminal = new AnsiTerminal();
+        DecimalFormat df = new DecimalFormat("#");
 
         // Set Alarm
         Scanner input = new Scanner(System.in);
@@ -25,18 +27,6 @@ public class Main {
         String[] time = new String[2];
         boolean am = true;
 
-        if (alarm.matches("[0-2?]\\d:[0-5]\\d[a|A|p|P][m|M]")) {
-            time = alarm.split(":");
-            ap = time[1].substring(2);
-            time[1] = time[1].substring(0, 2);
-
-            if (ap.equalsIgnoreCase("am"))
-                am = true;
-            else if (ap.equalsIgnoreCase("pm"))
-                am = false;
-        } else {
-            alarm = null;
-        }
 
         // When the program shuts down, reset the terminal to its original state.
         // This code makes sure the terminal is reset even if you kill your
@@ -94,14 +84,30 @@ public class Main {
             int sec2 = cal.get(Calendar.SECOND) % 10;
 
             // Alarm goes off
-            if (Alarm.isTime(cal, am, time, hour, min, sec)) {
-                for (int i=0; i<24; i++) {
-                    Alarm.alarm();
-                }
-                terminal.setTextColor(Alarm.colorChange());
-            } else if (alarm != null) {
+            if (alarm.matches("[0-2?]\\d:[0-5]\\d[a|A|p|P][m|M]")) {
+                time = alarm.split(":");
+                ap = time[1].substring(2);
+                time[1] = time[1].substring(0, 2);
+
+                if (ap.equalsIgnoreCase("am"))
+                    am = true;
+                else if (ap.equalsIgnoreCase("pm"))
+                    am = false;
+
                 terminal.moveTo(numRows, 0);
                 terminal.write("\u23F0" + "  " + alarm);
+
+                boolean morning = am && (cal.get(Calendar.HOUR_OF_DAY) <= 12);
+                boolean evening = !am && (cal.get(Calendar.HOUR_OF_DAY) >= 12);
+                if ((morning || evening) &&
+                        hour == Integer.valueOf(time[0]) &&
+                        min == Integer.valueOf(time[1]) &&
+                        sec <= 5) {
+                    terminal.setTextColor(Alarm.colorChange());
+                    for (int i = 0; i < 24; i++) {
+                        Alarm.alarm();
+                    }
+                }
             }
 
             // print Clock
@@ -121,7 +127,7 @@ public class Main {
 
             // print date & holiday if today is a national holiday
             Clock.printDate(cal);
-            Holiday.printHolidays(Holiday.getHoliday("National holiday"), cal);
+            Holidays.printHolidays(Holidays.getHolidays("National holiday"), cal);
 
             // print location
             terminal.setBackgroundColor(AnsiTerminal.Color.BLACK);
@@ -145,21 +151,35 @@ public class Main {
             terminal.moveTo(20, 20);
             terminal.write(sunsetEmoji + "  sunset at " + sunsetTime);
 
+            // Temperature, Pressure, Humidity
+            terminal.setTextColor(AnsiTerminal.Color.RED, false);
+            double temp = TPH.getTemp().intValue();
+            double presh = TPH.getPressure().intValue();
+
+            terminal.moveTo(21, 20);
+            terminal.write("Temperature : " + df.format(temp) + " F");
+            terminal.moveTo(22, 20);
+            terminal.write("Pressure : " + df.format(presh) + " inHg");
+            terminal.moveTo(23, 22);
+            terminal.write("Humidity : " + TPH.getHumid() + "%");
+
             //Write wind direction
             terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(21, 18);
+            terminal.moveTo(24, 18);
             terminal.write("Wind direction : " + windDirection);
 
             //Write wind speed
-            terminal.setTextColor(AnsiTerminal.Color.BLUE, false);
-            terminal.moveTo(22, 22);
+            terminal.moveTo(25, 22);
             terminal.write("Wind speed: " + windSpeed);
 
             //Write DST
             String date = DateTime.formatDate(cal);
             terminal.setTextColor(AnsiTerminal.Color.GREEN);
-            terminal.moveTo(23, 25);
-            terminal.write("DST :" + DST.isDST(DateTime.parseDate(date)));
+            terminal.moveTo(26, 21);
+            if (DST.isDST(DateTime.parseDate(date)))
+                terminal.write("DST is in effect");
+            else
+                terminal.write("DST is not in effect");
 
             //Write newsfeed
             terminal.moveTo(3, 0);
@@ -174,7 +194,7 @@ public class Main {
             int xCalendar = numRows - 6;
             terminal.setTextColor(AnsiTerminal.Color.CYAN);
             for (int i = 0; i < CalendarPrinter.getCalendar(cal).size(); i++) {
-                terminal.moveTo(xCalendar + i, 16);
+                terminal.moveTo(17 + i, numCols - 35);
                 terminal.write(CalendarPrinter.getCalendar(cal).get(i));
             }
 

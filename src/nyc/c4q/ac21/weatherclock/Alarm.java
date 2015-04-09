@@ -18,7 +18,6 @@ public class Alarm {
     public static void alarm() {
         URL url = Clock.class.getResource("/audio/happy.wav");
         AudioClip clip = Applet.newAudioClip(url);
-        int count = 0;
         clip.play();
     }
 
@@ -36,18 +35,5 @@ public class Alarm {
             return AnsiTerminal.Color.BLUE;
         else
             return AnsiTerminal.Color.MAGENTA;
-    }
-
-    public static boolean isTime(Calendar cal, boolean am, String[] time, int hour, int min, int sec){
-        boolean morning = am && (cal.get(Calendar.HOUR_OF_DAY) <= 12);
-        boolean evening = !am && (cal.get(Calendar.HOUR_OF_DAY) >= 12);
-
-        if ((morning || evening) &&
-                hour == Integer.valueOf(time[0]) &&
-                min == Integer.valueOf(time[1]) &&
-                sec <= 5) {
-            return true;
-        } else
-            return false;
     }
 }

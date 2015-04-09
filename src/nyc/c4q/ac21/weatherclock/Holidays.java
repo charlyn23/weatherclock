@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 public class Holidays {
+    final static int numCols = TerminalSize.getNumColumns();
+    final static AnsiTerminal terminal = new AnsiTerminal();
 
     /**
      * Loads holidays from a file.
@@ -36,18 +38,19 @@ public class Holidays {
         return holidays;
     }
     
-    public static void printHolidays(Hashmap<Calendar, String> holidays, Calendar cal){
+    public static void printHolidays(HashMap<Calendar, String> holidays, Calendar cal){
         int yPosition = numCols / 2 - 11;
         String holiday;
-        
+
         if(holidays.containsKey(cal)) {
-            holiday = "National Holiday:  " + holidays.get(date);
+            holiday = "National Holiday:  " + holidays.get(cal);
         }
         else {
             holiday = "";
         }
-        
+
         terminal.setTextColor(AnsiTerminal.Color.BLUE);
-        terminal.moveTo(14, yPostion);
+        terminal.moveTo(14, yPosition);
+        terminal.write(holiday);
     }
 }
