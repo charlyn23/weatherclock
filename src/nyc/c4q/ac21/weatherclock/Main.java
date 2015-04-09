@@ -84,13 +84,14 @@ public class Main {
         Random random = new Random();
         String wordOfDay = "";
         File zulu = new File(
-                "/Users/charlynbuchanan/Desktop/accesscode/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
+                "/Users/sufeizhao/Desktop/accesscode_forks/weatherclock/src/nyc/c4q/ac21/weatherclock/Zulu.txt");
         try {
             ArrayList<String> words = ZuluGrabber.getWordArray(zulu);
             int wordIndex = random.nextInt(words.size());
             wordOfDay = words.get(wordIndex);
         }
         catch (FileNotFoundException e) {
+            wordOfDay = "none";
         }
 
         // Print digital clock
@@ -212,7 +213,7 @@ public class Main {
             
             //Print word of day
             terminal.moveTo(numRows - 5, numCols - 38);
-            terminal.write("Zulu word of the day: " + wordOfDay);
+            terminal.write("Zulu word of the day: ");
             terminal.moveTo(numRows - 4, numCols - 38);
             terminal.write(wordOfDay);
 
